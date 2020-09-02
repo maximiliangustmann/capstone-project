@@ -1,7 +1,6 @@
-import React from "react";
+import React from 'react'
+import Reviews from './components/Reviews'
 
-function App() {
-  return <h1>Hello world</h1>;
+export default function App() {
+  return <Reviews />
 }
-
-export default App;
