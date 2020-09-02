@@ -10,7 +10,7 @@ export default function Reviews() {
           <h2>{review.title}</h2>
           <p>Rating: {review.rating}</p>
           <h3>{review.categorie}</h3>
-          <h3>{review.subcategorie}</h3>
+          <h4>{review.subcategorie}</h4>
           <h3>Summary: </h3>
           <p>{review.summary}</p>
           <h3>Lessons: </h3>
