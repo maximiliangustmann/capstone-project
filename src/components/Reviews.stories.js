@@ -6,8 +6,6 @@ export default {
   component: Reviews,
 }
 
-const Template = (args) => <Reviews {...args} />
+const Template = () => <Reviews />
 
 export const singleReview = Template.bind({})
-
-singleReview.args = {}
