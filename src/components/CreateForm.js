@@ -28,6 +28,10 @@ export default function CreateForm() {
         Lesson
         <Input></Input>
       </label>
+      <ButtonGroup>
+        <button>Cancel</button>
+        <button>Submit</button>
+      </ButtonGroup>
     </Form>
   )
 }
@@ -35,10 +39,16 @@ export default function CreateForm() {
 const Form = styled.form`
   display: grid;
   gap: 20px;
-  border: 2px solid black;
+  align-content: start;
   margin: 20px;
   padding: 20px;
+  width: 100px;
 `
 const Input = styled.input`
   margin: 0 20px;
+`
+
+const ButtonGroup = styled.div`
+  display: flex;
+  justify-content: space-evenly;
 `
