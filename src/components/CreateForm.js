@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 
-export default function CreateForm() {
+export default function CreateForm({ onSubmit }) {
   return (
-    <Form>
+    <Form onSubmit={handleSubmit}>
       <label>
         Title
         <Input />
@@ -34,6 +34,11 @@ export default function CreateForm() {
       </ButtonGroup>
     </Form>
   )
+  function handleSubmit(e) {
+    onSubmit()
+    e.preventDefault()
+    e.target.reset()
+  }
 }
 
 const Form = styled.form`
