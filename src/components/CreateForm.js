@@ -1,12 +1,9 @@
 import React from 'react'
 import styled from 'styled-components/macro'
-import reviews from '../mocks/reviews.json'
 
 export default function CreateForm() {
-  const [inputs, setInputs] = useState([reviews])
-
   return (
-    <Form onSubmit={(event) => handleSubmit(event)}>
+    <Form>
       <label>
         Title
         <Input />
@@ -37,9 +34,6 @@ export default function CreateForm() {
       </ButtonGroup>
     </Form>
   )
-  function handleSubmit(event) {
-    setInputs([...reviews, event.inputs])
-  }
 }
 
 const Form = styled.form`
