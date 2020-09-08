@@ -1,39 +1,45 @@
 import React from 'react'
 import styled from 'styled-components/macro'
+import reviews from '../mocks/reviews.json'
 
 export default function CreateForm() {
+  const [inputs, setInputs] = useState([reviews])
+
   return (
-    <Form>
+    <Form onSubmit={(event) => handleSubmit(event)}>
       <label>
         Title
-        <Input></Input>
+        <Input />
       </label>
       <label>
         Rating
-        <Input></Input>
+        <Input />
       </label>
       <label>
         Categorie
-        <Input></Input>
+        <Input />
       </label>
       <label>
         Subcategorie
-        <Input></Input>
+        <Input />
       </label>
       <label>
         Summary
-        <Input></Input>
+        <Input />
       </label>
       <label>
         Lesson
-        <Input></Input>
+        <Input />
       </label>
       <ButtonGroup>
         <button>Cancel</button>
-        <button>Submit</button>
+        <button type="submit">Submit</button>
       </ButtonGroup>
     </Form>
   )
+  function handleSubmit(event) {
+    setInputs([...reviews, event.inputs])
+  }
 }
 
 const Form = styled.form`
