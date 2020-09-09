@@ -1,43 +1,55 @@
 import React from 'react'
 import styled from 'styled-components/macro'
+import { NavLink } from 'react-router-dom'
 
 export default function CreateForm({ onSubmit }) {
   return (
     <Form onSubmit={handleSubmit}>
       <label>
         Title
-        <Input />
+        <Input name="title" />
       </label>
       <label>
         Rating
-        <Input />
+        <Input name="rating" />
       </label>
       <label>
         Categorie
-        <Input />
+        <Input name="categorie" />
       </label>
       <label>
         Subcategorie
-        <Input />
+        <Input name="subcategorie" />
       </label>
       <label>
         Summary
-        <Input />
+        <Input name="summary" />
       </label>
       <label>
         Lesson
-        <Input />
+        <Input name="lessons" />
       </label>
       <ButtonGroup>
-        <button>Cancel</button>
+        <NavLink exact to="/">
+          <button>Cancel</button>
+        </NavLink>
         <button type="submit">Submit</button>
       </ButtonGroup>
     </Form>
   )
-  function handleSubmit(e) {
-    onSubmit()
-    e.preventDefault()
-    e.target.reset()
+  function handleSubmit(event) {
+    event.preventDefault()
+    const form = event.target
+    const newReview = {
+      title: form.title.value,
+      rating: form.rating.value,
+      categorie: form.categorie.value,
+      subcategorie: form.subcategorie.value,
+      summary: form.summary.value,
+      lessons: form.lessons.value,
+    }
+    onSubmit(newReview)
+    form.reset()
   }
 }
 
