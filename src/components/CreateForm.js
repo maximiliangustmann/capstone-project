@@ -8,7 +8,7 @@ export default function CreateForm({ onSubmit }) {
     <Form onSubmit={handleSubmit}>
       <label>
         Title
-        <Input name="title" />
+        <Input autoFocus name="title" />
       </label>
       <label>
         Rating
