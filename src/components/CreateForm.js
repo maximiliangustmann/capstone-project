@@ -27,7 +27,7 @@ export default function CreateForm({ onSubmit }) {
         <Input name="summary" />
       </label>
       <label>
-        Lesson
+        Lessons
         <Input name="lessons" />
       </label>
       <ButtonGroup>
