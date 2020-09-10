@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components/macro'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useHistory } from 'react-router-dom'
 
 export default function CreateForm({ onSubmit }) {
+  const history = useHistory()
   return (
     <Form onSubmit={handleSubmit}>
       <label>
@@ -50,6 +51,7 @@ export default function CreateForm({ onSubmit }) {
     }
     onSubmit(newReview)
     form.reset()
+    history.push('/')
   }
 }
 
