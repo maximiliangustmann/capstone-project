@@ -12,8 +12,8 @@ export const singleReview = Template.bind({})
 singleReview.args = {
   title: 'The 4-hour work week',
   rating: '9.7',
-  categorie: 'Book',
-  subcategorie: 'Non-fiction',
+  category: 'Book',
+  subcategory: 'Non-fiction',
   summary: 'Guide to life your dreamlife',
   lessons: 'Living more working less',
 }

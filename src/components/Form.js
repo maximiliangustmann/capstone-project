@@ -11,16 +11,16 @@ export default function Form({ onSubmit }) {
         <Input autoFocus name="title" />
       </label>
       <label>
-        Rating
+        Rating (0.0 - 10.0)
         <Input name="rating" />
       </label>
       <label>
-        Categorie
-        <Input name="categorie" />
+        Category
+        <Input name="category" />
       </label>
       <label>
-        Subcategorie
-        <Input name="subcategorie" />
+        Subcategory
+        <Input name="subcategory" />
       </label>
       <label>
         Summary
@@ -32,7 +32,7 @@ export default function Form({ onSubmit }) {
       </label>
       <ButtonGroup>
         <NavLink exact to="/">
-          <button>Cancel</button>
+          <button type="button">Cancel</button>
         </NavLink>
         <button type="submit">Submit</button>
       </ButtonGroup>
@@ -44,8 +44,8 @@ export default function Form({ onSubmit }) {
     const newReview = {
       title: form.title.value,
       rating: form.rating.value,
-      categorie: form.categorie.value,
-      subcategorie: form.subcategorie.value,
+      category: form.category.value,
+      subcategory: form.subcategory.value,
       summary: form.summary.value,
       lessons: form.lessons.value,
     }
@@ -63,6 +63,7 @@ const StyledForm = styled.form`
   padding: 20px;
   width: 100px;
 `
+
 const Input = styled.input`
   margin: 0 20px;
 `

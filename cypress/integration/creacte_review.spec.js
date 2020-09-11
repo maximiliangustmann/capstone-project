@@ -12,14 +12,17 @@ context('Create review', () => {
 
     cy.get('label').contains('Title').find('input').type('TestTitle')
 
-    cy.get('label').contains('Rating').find('input').type('TestRating')
+    cy.get('label')
+      .contains('Rating (0.0 - 10.0)')
+      .find('input')
+      .type('TestRating')
 
-    cy.get('label').contains('Categorie').find('input').type('TestCategorie')
+    cy.get('label').contains('Category').find('input').type('TestCategory')
 
     cy.get('label')
-      .contains('Subcategorie')
+      .contains('Subcategory')
       .find('input')
-      .type('TestSubcategorie')
+      .type('TestSubcategory')
 
     cy.get('label').contains('Summary').find('input').type('TestSummary')
 
@@ -44,14 +47,17 @@ context('Create review', () => {
 
     cy.get('label').contains('Title').find('input').type('TestTitle')
 
-    cy.get('label').contains('Rating').find('input').type('TestRating')
+    cy.get('label')
+      .contains('Rating (0.0 - 10.0)')
+      .find('input')
+      .type('TestRating')
 
-    cy.get('label').contains('Categorie').find('input').type('TestCategorie')
+    cy.get('label').contains('Category').find('input').type('TestCategory')
 
     cy.get('label')
-      .contains('Subcategorie')
+      .contains('Subcategory')
       .find('input')
-      .type('TestSubcategorie')
+      .type('TestSubcategory')
 
     cy.get('label').contains('Summary').find('input').type('TestSummary')
 
