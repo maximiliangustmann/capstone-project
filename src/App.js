@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { BrowserRouter as Switch, Route } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import Dashboard from './pages/Dashboard'
-import CreateForm from './components/CreateForm'
+import Form from './components/Form'
 
 export default function App() {
   const [reviews, setReviews] = useState([])
@@ -11,7 +11,7 @@ export default function App() {
         <Dashboard reviews={reviews} />
       </Route>
       <Route path="/create">
-        <CreateForm onSubmit={addReview} />
+        <Form onSubmit={addReview} />
       </Route>
     </Switch>
   )

@@ -1,13 +1,13 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import CreateForm from './CreateForm'
+import Form from './Form'
 import { MemoryRouter } from 'react-router-dom'
 
-describe('CreateForm', () => {
+describe('Form', () => {
   it('renders correctly', () => {
     const tree = renderer.create(
       <MemoryRouter>
-        <CreateForm />
+        <Form />
       </MemoryRouter>
     )
     expect(tree).toMatchSnapshot()

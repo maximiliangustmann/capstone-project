@@ -63,7 +63,6 @@ const StyledForm = styled.form`
   padding: 20px;
   width: 100px;
 `
-
 const Input = styled.input`
   margin: 0 20px;
 `

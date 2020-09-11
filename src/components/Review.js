@@ -11,7 +11,7 @@ export default function Review({
   index,
 }) {
   return (
-    <StyledReview key={index}>
+    <StyledReview>
       <h2>{title}</h2>
       <p>Rating: {rating}</p>
       <h3>{categorie}</h3>

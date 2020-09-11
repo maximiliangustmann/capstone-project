@@ -27,9 +27,14 @@ context('Create review', () => {
 
     cy.get('button').contains('Submit').click()
 
-    cy.visit('http://localhost:3000/')
-
     cy.get('h2').contains('TestTitle')
+
+    cy.get('button').contains('Create new review').click()
+
+    cy.get('label')
+      .contains('Title')
+      .find('input')
+      .should('not.have.value', 'TestTitle')
   })
 
   it('cancel a new review', () => {
@@ -54,6 +59,11 @@ context('Create review', () => {
 
     cy.get('button').contains('Cancel').click()
 
-    cy.visit('http://localhost:3000/')
+    cy.get('button').contains('Create new review').click()
+
+    cy.get('label')
+      .contains('Title')
+      .find('input')
+      .should('not.have.value', 'TestTitle')
   })
 })
