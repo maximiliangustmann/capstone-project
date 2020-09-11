@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreateForm renders correctly 1`] = `
+<form
+  className="CreateForm__Form-sc-1sav95a-0 iwltNh"
+  onSubmit={[Function]}
+>
+  <label>
+    Title
+    <input
+      autoFocus={true}
+      className="CreateForm__Input-sc-1sav95a-1 WCGvC"
+      name="title"
+    />
+  </label>
+  <label>
+    Rating
+    <input
+      className="CreateForm__Input-sc-1sav95a-1 WCGvC"
+      name="rating"
+    />
+  </label>
+  <label>
+    Categorie
+    <input
+      className="CreateForm__Input-sc-1sav95a-1 WCGvC"
+      name="categorie"
+    />
+  </label>
+  <label>
+    Subcategorie
+    <input
+      className="CreateForm__Input-sc-1sav95a-1 WCGvC"
+      name="subcategorie"
+    />
+  </label>
+  <label>
+    Summary
+    <input
+      className="CreateForm__Input-sc-1sav95a-1 WCGvC"
+      name="summary"
+    />
+  </label>
+  <label>
+    Lesson
+    <input
+      className="CreateForm__Input-sc-1sav95a-1 WCGvC"
+      name="lessons"
+    />
+  </label>
+  <div
+    className="CreateForm__ButtonGroup-sc-1sav95a-2 grXHUY"
+  >
+    <a
+      aria-current="page"
+      className="active"
+      href="/"
+      onClick={[Function]}
+      style={Object {}}
+    >
+      <button>
+        Cancel
+      </button>
+    </a>
+    <button
+      type="submit"
+    >
+      Submit
+    </button>
+  </div>
+</form>
+`;

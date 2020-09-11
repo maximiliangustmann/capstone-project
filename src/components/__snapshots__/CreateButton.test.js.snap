@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreateButton renders correctly 1`] = `
+<a
+  aria-current={null}
+  href="/create"
+  onClick={[Function]}
+>
+  <button>
+    Create new review
+  </button>
+</a>
+`;

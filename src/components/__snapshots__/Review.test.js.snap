@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Review renders correctly 1`] = `
+<section
+  className="Review__StyledReview-ip4zvc-0 iANspQ"
+>
+  <h2 />
+  <p>
+    Rating: 
+  </p>
+  <h3 />
+  <h4 />
+  <h3>
+    Summary: 
+  </h3>
+  <p />
+  <h3>
+    Lessons: 
+  </h3>
+  <p />
+</section>
+`;
