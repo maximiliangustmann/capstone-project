@@ -4,18 +4,17 @@ import styled from 'styled-components/macro'
 export default function Review({
   title,
   rating,
-  categorie,
-  subcategorie,
+  category,
+  subcategory,
   summary,
   lessons,
-  index,
 }) {
   return (
     <StyledReview>
       <h2>{title}</h2>
       <p>Rating: {rating}</p>
-      <h3>{categorie}</h3>
-      <h4>{subcategorie}</h4>
+      <h3>{category}</h3>
+      <h4>{subcategory}</h4>
       <h3>Summary: </h3>
       <p>{summary}</p>
       <h3>Lessons: </h3>
