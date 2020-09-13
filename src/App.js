@@ -4,7 +4,9 @@ import Dashboard from './pages/Dashboard'
 import Form from './components/Form'
 
 export default function App() {
-  const [reviews, setReviews] = useState([])
+  const [reviews, setReviews] = useState(
+    JSON.parse(localStorage.getItem('savedReview')) || []
+  )
   return (
     <Switch>
       <Route exact path="/">
@@ -17,5 +19,6 @@ export default function App() {
   )
   function addReview(newReview) {
     setReviews([...reviews, newReview])
+    localStorage.setItem('savedReview', JSON.stringify([...reviews, newReview]))
   }
 }
