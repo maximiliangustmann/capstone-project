@@ -32,7 +32,7 @@ export default function Form({ onSubmit }) {
       </label>
       <ButtonGroup>
         <NavLink exact to="/">
-          <button type="button">Cancel</button>
+          <button type="reset">Cancel</button>
         </NavLink>
         <button type="submit">Submit</button>
       </ButtonGroup>
