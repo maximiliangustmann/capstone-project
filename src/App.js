@@ -10,7 +10,7 @@ export default function App() {
   return (
     <Switch>
       <Route exact path="/">
-        <Dashboard reviews={reviews} />
+        <Dashboard reviews={reviews} onClick={() => handleRemove(reviews)} />
       </Route>
       <Route path="/create">
         <Form onSubmit={addReview} />
@@ -20,5 +20,10 @@ export default function App() {
   function addReview(newReview) {
     setReviews([...reviews, newReview])
     localStorage.setItem('savedReview', JSON.stringify([...reviews, newReview]))
+  }
+  function handleRemove(reviews) {
+    console.log(reviews)
+    const index = reviews.findIndex((review) => review.title)
+    setReviews([...reviews.slice(0, index), ...reviews.slice(index + 1)])
   }
 }

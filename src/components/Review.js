@@ -8,10 +8,13 @@ export default function Review({
   subcategory,
   summary,
   lessons,
+  onClick,
 }) {
   return (
     <StyledReview>
-      <DeleteButton>x</DeleteButton>
+      <DeleteButton type="button" onClick={onClick}>
+        x
+      </DeleteButton>
       <h2>{title}</h2>
       <p>Rating: {rating}</p>
       <h3>{category}</h3>
