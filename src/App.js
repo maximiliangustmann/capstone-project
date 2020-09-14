@@ -9,7 +9,7 @@ export default function App() {
   return (
     <Switch>
       <Route exact path="/">
-        <Dashboard reviews={reviews} onClick={removeReview} />
+        <Dashboard reviews={reviews} onRemove={removeReview} />
       </Route>
       <Route path="/create">
         <Form onSubmit={addReview} />

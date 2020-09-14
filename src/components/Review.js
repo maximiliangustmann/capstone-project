@@ -8,11 +8,11 @@ export default function Review({
   subcategory,
   summary,
   lessons,
-  onClick,
+  onRemove,
 }) {
   return (
     <StyledReview>
-      <DeleteButton type="button" onClick={() => onClick(title)}>
+      <DeleteButton type="button" onClick={() => onRemove(title)}>
         x
       </DeleteButton>
       <h2>{title}</h2>
