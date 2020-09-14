@@ -12,7 +12,7 @@ export default function Review({
 }) {
   return (
     <StyledReview>
-      <DeleteButton type="button" onClick={onClick}>
+      <DeleteButton type="button" onClick={() => onClick(title)}>
         x
       </DeleteButton>
       <h2>{title}</h2>
