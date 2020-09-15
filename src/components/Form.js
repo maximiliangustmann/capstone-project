@@ -21,11 +21,19 @@ export default function Form({ onSubmit }) {
       )}
 
       <label>
-        Rating (0.0 - 10.0)
-        <Input name="rating" ref={register({ required: true })} />
+        Rating (1-100)
+        <Input
+          name="rating"
+          ref={register({ required: true, pattern: /^[1-9][0-9]?$|^100$/ })}
+        />
       </label>
       {errors.rating && errors.rating.type === 'required' && (
         <StyledErrorMessage>Rating is required!</StyledErrorMessage>
+      )}
+      {errors.rating && errors.rating.type === 'pattern' && (
+        <StyledErrorMessage>
+          Please choose a number between 0 and 100
+        </StyledErrorMessage>
       )}
 
       <label>
