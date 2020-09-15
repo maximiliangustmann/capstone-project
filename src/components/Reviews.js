@@ -5,7 +5,7 @@ export default function Reviews({ reviews, onRemove }) {
   return (
     <>
       {reviews.map((review) => {
-        return <Review key={review.title} {...review} onRemove={onRemove} />
+        return <Review key={review.id} {...review} onRemove={onRemove} />
       })}
     </>
   )
