@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form'
 
 export default function Form({ onSubmit }) {
   const history = useHistory()
-  const { register, handleSubmit } = useForm()
+  const { register, handleSubmit, errors } = useForm()
   const onFormSubmit = (newReview) => {
     onSubmit(newReview)
     history.push('/')
@@ -16,26 +16,50 @@ export default function Form({ onSubmit }) {
         Title
         <Input autoFocus name="title" ref={register({ required: true })} />
       </label>
+      {errors.title && errors.title.type === 'required' && (
+        <StyledErrorMessage>Title is required!</StyledErrorMessage>
+      )}
+
       <label>
         Rating (0.0 - 10.0)
         <Input name="rating" ref={register({ required: true })} />
       </label>
+      {errors.rating && errors.rating.type === 'required' && (
+        <StyledErrorMessage>Rating is required!</StyledErrorMessage>
+      )}
+
       <label>
         Category
         <Input name="category" ref={register({ required: true })} />
       </label>
+      {errors.category && errors.category.type === 'required' && (
+        <StyledErrorMessage>Category is required!</StyledErrorMessage>
+      )}
+
       <label>
         Subcategory
         <Input name="subcategory" ref={register({ required: true })} />
       </label>
+      {errors.subcategory && errors.subcategory.type === 'required' && (
+        <StyledErrorMessage>Subcategory is required!</StyledErrorMessage>
+      )}
+
       <label>
         Summary
         <Input name="summary" ref={register({ required: true })} />
       </label>
+      {errors.summary && errors.summary.type === 'required' && (
+        <StyledErrorMessage>Summary is required!</StyledErrorMessage>
+      )}
+
       <label>
         Lessons
         <Input name="lessons" ref={register({ required: true })} />
       </label>
+      {errors.lessons && errors.lessons.type === 'required' && (
+        <StyledErrorMessage>Lessons is required!</StyledErrorMessage>
+      )}
+
       <ButtonGroup>
         <NavLink exact to="/">
           <button type="reset">Cancel</button>
@@ -44,21 +68,6 @@ export default function Form({ onSubmit }) {
       </ButtonGroup>
     </StyledForm>
   )
-  /* function handleSubmit(event) {
-    event.preventDefault()
-    const form = event.target
-    const newReview = {
-      title: form.title.value,
-      rating: form.rating.value,
-      category: form.category.value,
-      subcategory: form.subcategory.value,
-      summary: form.summary.value,
-      lessons: form.lessons.value,
-    }
-    onSubmit(newReview)
-    form.reset()
-    history.push('/')
-  } */
 }
 
 const StyledForm = styled.form`
@@ -77,4 +86,13 @@ const Input = styled.input`
 const ButtonGroup = styled.div`
   display: flex;
   justify-content: space-evenly;
+`
+
+const StyledErrorMessage = styled.p`
+  color: red;
+  font-size: 75%;
+  ::before {
+    display: inline;
+    content: '⚠ ';
+  }
 `
