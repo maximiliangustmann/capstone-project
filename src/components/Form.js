@@ -1,34 +1,40 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 import { NavLink, useHistory } from 'react-router-dom'
+import { useForm } from 'react-hook-form'
 
 export default function Form({ onSubmit }) {
   const history = useHistory()
+  const { register, handleSubmit } = useForm()
+  const onFormSubmit = (newReview) => {
+    onSubmit(newReview)
+    history.push('/')
+  }
   return (
-    <StyledForm onSubmit={handleSubmit}>
+    <StyledForm onSubmit={handleSubmit(onFormSubmit)}>
       <label>
         Title
-        <Input autoFocus name="title" />
+        <Input autoFocus name="title" ref={register({ required: true })} />
       </label>
       <label>
         Rating (0.0 - 10.0)
-        <Input name="rating" />
+        <Input name="rating" ref={register({ required: true })} />
       </label>
       <label>
         Category
-        <Input name="category" />
+        <Input name="category" ref={register({ required: true })} />
       </label>
       <label>
         Subcategory
-        <Input name="subcategory" />
+        <Input name="subcategory" ref={register({ required: true })} />
       </label>
       <label>
         Summary
-        <Input name="summary" />
+        <Input name="summary" ref={register({ required: true })} />
       </label>
       <label>
         Lessons
-        <Input name="lessons" />
+        <Input name="lessons" ref={register({ required: true })} />
       </label>
       <ButtonGroup>
         <NavLink exact to="/">
@@ -38,7 +44,7 @@ export default function Form({ onSubmit }) {
       </ButtonGroup>
     </StyledForm>
   )
-  function handleSubmit(event) {
+  /* function handleSubmit(event) {
     event.preventDefault()
     const form = event.target
     const newReview = {
@@ -52,7 +58,7 @@ export default function Form({ onSubmit }) {
     onSubmit(newReview)
     form.reset()
     history.push('/')
-  }
+  } */
 }
 
 const StyledForm = styled.form`
