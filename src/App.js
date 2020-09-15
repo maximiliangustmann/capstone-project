@@ -1,24 +1,19 @@
-import React, { useState } from 'react'
-import { Switch, Route } from 'react-router-dom'
-import Dashboard from './pages/Dashboard'
+import React from 'react'
+import { Route, Switch } from 'react-router-dom'
 import Form from './components/Form'
+import Dashboard from './pages/Dashboard'
+import useReviews from './hooks/useReviews'
 
 export default function App() {
-  const [reviews, setReviews] = useState(
-    JSON.parse(localStorage.getItem('savedReview')) || []
-  )
+  const { reviews, addReview, removeReview } = useReviews()
   return (
     <Switch>
       <Route exact path="/">
-        <Dashboard reviews={reviews} />
+        <Dashboard reviews={reviews} onRemove={removeReview} />
       </Route>
       <Route path="/create">
         <Form onSubmit={addReview} />
       </Route>
     </Switch>
   )
-  function addReview(newReview) {
-    setReviews([...reviews, newReview])
-    localStorage.setItem('savedReview', JSON.stringify([...reviews, newReview]))
-  }
 }
