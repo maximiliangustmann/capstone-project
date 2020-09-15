@@ -2,12 +2,13 @@ import React from 'react'
 import styled from 'styled-components/macro'
 import { NavLink, useHistory } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
+import { v4 as uuidv4 } from 'uuid'
 
 export default function Form({ onSubmit }) {
   const history = useHistory()
   const { register, handleSubmit, errors } = useForm()
   const onFormSubmit = (newReview) => {
-    onSubmit(newReview)
+    onSubmit({ ...newReview, id: uuidv4() })
     history.push('/')
   }
   return (

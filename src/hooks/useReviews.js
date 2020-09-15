@@ -14,7 +14,6 @@ export default function useReviews() {
   }
 
   function removeReview(title) {
-    console.log(reviews)
     const index = reviews.findIndex((review) => review.title === title)
     setReviews([...reviews.slice(0, index), ...reviews.slice(index + 1)])
   }
