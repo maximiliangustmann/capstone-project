@@ -10,10 +10,7 @@ context('Create review', () => {
 
     cy.get('label').contains('Title').find('input').type('TestTitle')
 
-    cy.get('label')
-      .contains('Rating (0.0 - 10.0)')
-      .find('input')
-      .type('TestRating')
+    cy.get('label').contains('Rating').find('input').type('30')
 
     cy.get('label').contains('Category').find('input').type('TestCategory')
 
