@@ -15,7 +15,11 @@ export default function Form({ onSubmit }) {
     <StyledForm onSubmit={handleSubmit(onFormSubmit)}>
       <label>
         Title
-        <Input autoFocus name="title" ref={register({ required: true })} />
+        <StyledInput
+          autoFocus
+          name="title"
+          ref={register({ required: true })}
+        />
       </label>
       {errors.title && errors.title.type === 'required' && (
         <StyledErrorMessage>Title is required!</StyledErrorMessage>
@@ -23,8 +27,11 @@ export default function Form({ onSubmit }) {
 
       <label>
         Rating (1-100)
-        <Input
+        <StyledInput
           name="rating"
+          type="number"
+          min="1"
+          max="100"
           ref={register({ required: true, pattern: /^[1-9][0-9]?$|^100$/ })}
         />
       </label>
@@ -33,13 +40,13 @@ export default function Form({ onSubmit }) {
       )}
       {errors.rating && errors.rating.type === 'pattern' && (
         <StyledErrorMessage>
-          Please choose a number between 0 and 100
+          Please choose a number between 1 and 100
         </StyledErrorMessage>
       )}
 
       <label>
         Category
-        <Input name="category" ref={register({ required: true })} />
+        <StyledInput name="category" ref={register({ required: true })} />
       </label>
       {errors.category && errors.category.type === 'required' && (
         <StyledErrorMessage>Category is required!</StyledErrorMessage>
@@ -47,7 +54,7 @@ export default function Form({ onSubmit }) {
 
       <label>
         Subcategory
-        <Input name="subcategory" ref={register({ required: true })} />
+        <StyledInput name="subcategory" ref={register({ required: true })} />
       </label>
       {errors.subcategory && errors.subcategory.type === 'required' && (
         <StyledErrorMessage>Subcategory is required!</StyledErrorMessage>
@@ -55,7 +62,7 @@ export default function Form({ onSubmit }) {
 
       <label>
         Summary
-        <Input name="summary" ref={register({ required: true })} />
+        <StyledInput name="summary" ref={register({ required: true })} />
       </label>
       {errors.summary && errors.summary.type === 'required' && (
         <StyledErrorMessage>Summary is required!</StyledErrorMessage>
@@ -63,7 +70,7 @@ export default function Form({ onSubmit }) {
 
       <label>
         Lessons
-        <Input name="lessons" ref={register({ required: true })} />
+        <StyledInput name="lessons" ref={register({ required: true })} />
       </label>
       {errors.lessons && errors.lessons.type === 'required' && (
         <StyledErrorMessage>Lessons is required!</StyledErrorMessage>
@@ -88,7 +95,7 @@ const StyledForm = styled.form`
   width: 100px;
 `
 
-const Input = styled.input`
+const StyledInput = styled.input`
   margin: 0 20px;
 `
 
