@@ -17,5 +17,10 @@ export default function useReviews() {
     const index = reviews.findIndex((review) => review.id === id)
     setReviews([...reviews.slice(0, index), ...reviews.slice(index + 1)])
   }
-  return { reviews, addReview, removeReview }
+
+  function editReview(id) {
+    console.log(id)
+  }
+
+  return { reviews, addReview, removeReview, editReview }
 }
