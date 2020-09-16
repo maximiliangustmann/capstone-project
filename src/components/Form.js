@@ -15,65 +15,56 @@ export default function Form({ onSubmit }) {
     <StyledForm onSubmit={handleSubmit(onFormSubmit)}>
       <label>
         Title
-        <StyledInput
-          autoFocus
-          name="title"
-          ref={register({ required: true })}
-        />
+        <Input autoFocus name="title" ref={register({ required: true })} />
       </label>
       {errors.title && errors.title.type === 'required' && (
-        <StyledErrorMessage>Title is required!</StyledErrorMessage>
+        <ErrorMessage>Title is required!</ErrorMessage>
       )}
 
       <label>
         Rating (1-100)
-        <StyledInput
+        <Input
           name="rating"
-          type="number"
-          min="1"
-          max="100"
           ref={register({ required: true, pattern: /^[1-9][0-9]?$|^100$/ })}
         />
       </label>
       {errors.rating && errors.rating.type === 'required' && (
-        <StyledErrorMessage>Rating is required!</StyledErrorMessage>
+        <ErrorMessage>Rating is required!</ErrorMessage>
       )}
       {errors.rating && errors.rating.type === 'pattern' && (
-        <StyledErrorMessage>
-          Please choose a number between 1 and 100
-        </StyledErrorMessage>
+        <ErrorMessage>Please choose a number between 1 and 100</ErrorMessage>
       )}
 
       <label>
         Category
-        <StyledInput name="category" ref={register({ required: true })} />
+        <Input name="category" ref={register({ required: true })} />
       </label>
       {errors.category && errors.category.type === 'required' && (
-        <StyledErrorMessage>Category is required!</StyledErrorMessage>
+        <ErrorMessage>Category is required!</ErrorMessage>
       )}
 
       <label>
         Subcategory
-        <StyledInput name="subcategory" ref={register({ required: true })} />
+        <Input name="subcategory" ref={register({ required: true })} />
       </label>
       {errors.subcategory && errors.subcategory.type === 'required' && (
-        <StyledErrorMessage>Subcategory is required!</StyledErrorMessage>
+        <ErrorMessage>Subcategory is required!</ErrorMessage>
       )}
 
       <label>
         Summary
-        <StyledInput name="summary" ref={register({ required: true })} />
+        <Input name="summary" ref={register({ required: true })} />
       </label>
       {errors.summary && errors.summary.type === 'required' && (
-        <StyledErrorMessage>Summary is required!</StyledErrorMessage>
+        <ErrorMessage>Summary is required!</ErrorMessage>
       )}
 
       <label>
         Lessons
-        <StyledInput name="lessons" ref={register({ required: true })} />
+        <Input name="lessons" ref={register({ required: true })} />
       </label>
       {errors.lessons && errors.lessons.type === 'required' && (
-        <StyledErrorMessage>Lessons is required!</StyledErrorMessage>
+        <ErrorMessage>Lessons is required!</ErrorMessage>
       )}
 
       <ButtonGroup>
@@ -95,7 +86,7 @@ const StyledForm = styled.form`
   width: 100px;
 `
 
-const StyledInput = styled.input`
+const Input = styled.input`
   margin: 0 20px;
 `
 
@@ -104,7 +95,7 @@ const ButtonGroup = styled.div`
   justify-content: space-evenly;
 `
 
-const StyledErrorMessage = styled.p`
+const ErrorMessage = styled.p`
   color: red;
   font-size: 75%;
   ::before {

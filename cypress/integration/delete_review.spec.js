@@ -5,7 +5,7 @@ context('Create review', () => {
     cy.visit('http://localhost:3000/')
   })
 
-  it('delete review', () => {
+  it('deletes review', () => {
     cy.get('button').contains('Create new review').click()
 
     cy.get('label').contains('Title').find('input').type('TestTitle')

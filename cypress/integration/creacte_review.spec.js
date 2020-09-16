@@ -5,7 +5,7 @@ context('Create review', () => {
     cy.visit('http://localhost:3000/')
   })
 
-  it('submit a new review', () => {
+  it('submits a new review', () => {
     cy.get('button').contains('Create new review').click()
 
     cy.get('label').contains('Title').find('input').type('TestTitle')
@@ -35,7 +35,7 @@ context('Create review', () => {
       .should('not.have.value', 'TestTitle')
   })
 
-  it('cancel a new review', () => {
+  it('cancels a new review', () => {
     cy.get('button').contains('Create new review').click()
 
     cy.get('label').contains('Title').find('input').type('TestTitle')
@@ -63,7 +63,7 @@ context('Create review', () => {
       .should('not.have.value', 'TestTitle')
   })
 
-  it('save in local storage', () => {
+  it('saves in local storage', () => {
     cy.get('button').contains('Create new review').click()
 
     cy.get('label').contains('Title').find('input').type('TestTitle')
@@ -88,7 +88,7 @@ context('Create review', () => {
     cy.get('h2').contains('TestTitle')
   })
 
-  it('validate wrong rating pattern', () => {
+  it('validates wrong rating pattern', () => {
     cy.get('button').contains('Create new review').click()
 
     cy.get('label').contains('Title').find('input').type('TestTitle')
@@ -110,7 +110,7 @@ context('Create review', () => {
     cy.get('p').contains('Please')
   })
 
-  it('validate missing input', () => {
+  it('validates missing input', () => {
     cy.get('button').contains('Create new review').click()
 
     cy.get('label').contains('Title').find('input').type('TestTitle')
