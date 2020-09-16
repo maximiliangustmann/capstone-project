@@ -1,35 +1,72 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 import { NavLink, useHistory } from 'react-router-dom'
+import { useForm } from 'react-hook-form'
+import { v4 as uuidv4 } from 'uuid'
 
 export default function Form({ onSubmit }) {
   const history = useHistory()
+  const { register, handleSubmit, errors } = useForm()
+  const onFormSubmit = (newReview) => {
+    onSubmit({ ...newReview, id: uuidv4() })
+    history.push('/')
+  }
   return (
-    <StyledForm onSubmit={handleSubmit}>
+    <StyledForm onSubmit={handleSubmit(onFormSubmit)}>
       <label>
         Title
-        <Input autoFocus name="title" />
+        <Input autoFocus name="title" ref={register({ required: true })} />
       </label>
+      {errors.title && errors.title.type === 'required' && (
+        <ErrorMessage>Title is required!</ErrorMessage>
+      )}
+
       <label>
-        Rating (0.0 - 10.0)
-        <Input name="rating" />
+        Rating (1-100)
+        <Input
+          name="rating"
+          ref={register({ required: true, pattern: /^[1-9][0-9]?$|^100$/ })}
+        />
       </label>
+      {errors.rating && errors.rating.type === 'required' && (
+        <ErrorMessage>Rating is required!</ErrorMessage>
+      )}
+      {errors.rating && errors.rating.type === 'pattern' && (
+        <ErrorMessage>Please choose a number between 1 and 100</ErrorMessage>
+      )}
+
       <label>
         Category
-        <Input name="category" />
+        <Input name="category" ref={register({ required: true })} />
       </label>
+      {errors.category && errors.category.type === 'required' && (
+        <ErrorMessage>Category is required!</ErrorMessage>
+      )}
+
       <label>
         Subcategory
-        <Input name="subcategory" />
+        <Input name="subcategory" ref={register({ required: true })} />
       </label>
+      {errors.subcategory && errors.subcategory.type === 'required' && (
+        <ErrorMessage>Subcategory is required!</ErrorMessage>
+      )}
+
       <label>
         Summary
-        <Input name="summary" />
+        <Input name="summary" ref={register({ required: true })} />
       </label>
+      {errors.summary && errors.summary.type === 'required' && (
+        <ErrorMessage>Summary is required!</ErrorMessage>
+      )}
+
       <label>
         Lessons
-        <Input name="lessons" />
+        <Input name="lessons" ref={register({ required: true })} />
       </label>
+      {errors.lessons && errors.lessons.type === 'required' && (
+        <ErrorMessage>Lessons is required!</ErrorMessage>
+      )}
+
       <ButtonGroup>
         <NavLink exact to="/">
           <button type="reset">Cancel</button>
@@ -38,21 +75,6 @@ export default function Form({ onSubmit }) {
       </ButtonGroup>
     </StyledForm>
   )
-  function handleSubmit(event) {
-    event.preventDefault()
-    const form = event.target
-    const newReview = {
-      title: form.title.value,
-      rating: form.rating.value,
-      category: form.category.value,
-      subcategory: form.subcategory.value,
-      summary: form.summary.value,
-      lessons: form.lessons.value,
-    }
-    onSubmit(newReview)
-    form.reset()
-    history.push('/')
-  }
 }
 
 const StyledForm = styled.form`
@@ -71,4 +93,13 @@ const Input = styled.input`
 const ButtonGroup = styled.div`
   display: flex;
   justify-content: space-evenly;
+`
+
+const ErrorMessage = styled.p`
+  color: red;
+  font-size: 75%;
+  ::before {
+    display: inline;
+    content: '⚠ ';
+  }
 `

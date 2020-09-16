@@ -1,55 +1,55 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CreateForm renders correctly 1`] = `
+exports[`Form renders correctly 1`] = `
 <form
-  className="CreateForm__Form-sc-1sav95a-0 iwltNh"
+  className="Form__StyledForm-fle9al-0 giVqvM"
   onSubmit={[Function]}
 >
   <label>
     Title
     <input
       autoFocus={true}
-      className="CreateForm__Input-sc-1sav95a-1 WCGvC"
+      className="Form__Input-fle9al-1 jjijvg"
       name="title"
     />
   </label>
   <label>
-    Rating
+    Rating (1-100)
     <input
-      className="CreateForm__Input-sc-1sav95a-1 WCGvC"
+      className="Form__Input-fle9al-1 jjijvg"
       name="rating"
     />
   </label>
   <label>
-    Categorie
+    Category
     <input
-      className="CreateForm__Input-sc-1sav95a-1 WCGvC"
-      name="categorie"
+      className="Form__Input-fle9al-1 jjijvg"
+      name="category"
     />
   </label>
   <label>
-    Subcategorie
+    Subcategory
     <input
-      className="CreateForm__Input-sc-1sav95a-1 WCGvC"
-      name="subcategorie"
+      className="Form__Input-fle9al-1 jjijvg"
+      name="subcategory"
     />
   </label>
   <label>
     Summary
     <input
-      className="CreateForm__Input-sc-1sav95a-1 WCGvC"
+      className="Form__Input-fle9al-1 jjijvg"
       name="summary"
     />
   </label>
   <label>
-    Lesson
+    Lessons
     <input
-      className="CreateForm__Input-sc-1sav95a-1 WCGvC"
+      className="Form__Input-fle9al-1 jjijvg"
       name="lessons"
     />
   </label>
   <div
-    className="CreateForm__ButtonGroup-sc-1sav95a-2 grXHUY"
+    className="Form__ButtonGroup-fle9al-2 dhPGVu"
   >
     <a
       aria-current="page"
@@ -58,7 +58,9 @@ exports[`CreateForm renders correctly 1`] = `
       onClick={[Function]}
       style={Object {}}
     >
-      <button>
+      <button
+        type="reset"
+      >
         Cancel
       </button>
     </a>
