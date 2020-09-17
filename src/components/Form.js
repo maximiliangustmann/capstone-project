@@ -38,7 +38,11 @@ export default function Form({
     <StyledForm onSubmit={handleSubmit(onFormSubmit)}>
       <label>
         Title
-        <Input autoFocus name="title" ref={register({ required: true })} />
+        <Input
+          autoFocus
+          name="title"
+          ref={register({ required: true, pattern: /.*\S.*/ })}
+        />
       </label>
       {errors.title && errors.title.type === 'required' && (
         <ErrorMessage>Title is required!</ErrorMessage>
@@ -60,7 +64,10 @@ export default function Form({
 
       <label>
         Category
-        <Input name="category" ref={register({ required: true })} />
+        <Input
+          name="category"
+          ref={register({ required: true, pattern: /.*\S.*/ })}
+        />
       </label>
       {errors.category && errors.category.type === 'required' && (
         <ErrorMessage>Category is required!</ErrorMessage>
@@ -68,7 +75,10 @@ export default function Form({
 
       <label>
         Subcategory
-        <Input name="subcategory" ref={register({ required: true })} />
+        <Input
+          name="subcategory"
+          ref={register({ required: true, pattern: /.*\S.*/ })}
+        />
       </label>
       {errors.subcategory && errors.subcategory.type === 'required' && (
         <ErrorMessage>Subcategory is required!</ErrorMessage>
@@ -76,7 +86,10 @@ export default function Form({
 
       <label>
         Summary
-        <Input name="summary" ref={register({ required: true })} />
+        <Input
+          name="summary"
+          ref={register({ required: true, pattern: /.*\S.*/ })}
+        />
       </label>
       {errors.summary && errors.summary.type === 'required' && (
         <ErrorMessage>Summary is required!</ErrorMessage>
@@ -84,7 +97,10 @@ export default function Form({
 
       <label>
         Lessons
-        <Input name="lessons" ref={register({ required: true })} />
+        <Input
+          name="lessons"
+          ref={register({ required: true, pattern: /.*\S.*/ })}
+        />
       </label>
       {errors.lessons && errors.lessons.type === 'required' && (
         <ErrorMessage>Lessons is required!</ErrorMessage>
