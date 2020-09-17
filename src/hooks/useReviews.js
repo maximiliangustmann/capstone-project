@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react'
+import { useHistory } from 'react-router-dom'
 
 export default function useReviews() {
   const [reviews, setReviews] = useState(
     JSON.parse(localStorage.getItem('savedReview')) || []
   )
+  const [editReviewState, setEditReviewState] = useState(undefined)
+  const history = useHistory()
 
   useEffect(() => {
     localStorage.setItem('savedReview', JSON.stringify(reviews))
@@ -27,5 +30,20 @@ export default function useReviews() {
     ])
   }
 
-  return { reviews, addReview, removeReview, editReview }
+  function onEdit(id) {
+    const editedReview = reviews.find((review) => review.id === id)
+    setEditReviewState(editedReview)
+    editReview(editedReview)
+    history.push('/create')
+  }
+
+  return {
+    reviews,
+    editReviewState,
+    setEditReviewState,
+    addReview,
+    removeReview,
+    editReview,
+    onEdit,
+  }
 }
