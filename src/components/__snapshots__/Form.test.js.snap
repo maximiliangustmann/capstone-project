@@ -59,6 +59,7 @@ exports[`Form renders correctly 1`] = `
       style={Object {}}
     >
       <button
+        onClick={[Function]}
         type="reset"
       >
         Cancel
