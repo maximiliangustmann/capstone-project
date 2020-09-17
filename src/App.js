@@ -25,7 +25,7 @@ export default function App() {
   )
 
   function onEdit(id) {
-    const editedReview = reviews.find((editedReview) => editedReview._id === id)
+    const editedReview = reviews.find((review) => review.id === id)
     setEditReviewState(editedReview)
     editReview(editedReview)
     history.push('/create')
