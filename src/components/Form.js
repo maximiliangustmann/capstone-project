@@ -1,16 +1,39 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components/macro'
 import { NavLink, useHistory } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import { v4 as uuidv4 } from 'uuid'
 
-export default function Form({ onSubmit }) {
+export default function Form({
+  onSubmit,
+  editReview,
+  editReviewState,
+  setEditReviewState,
+}) {
   const history = useHistory()
-  const { register, handleSubmit, errors } = useForm()
+  const { register, handleSubmit, errors, setValue } = useForm()
+
   const onFormSubmit = (newReview) => {
-    onSubmit({ ...newReview, id: uuidv4() })
-    history.push('/')
+    if (editReviewState) {
+      editReview({ ...newReview, id: editReviewState.id })
+      setEditReviewState(undefined)
+      history.push('/')
+    } else {
+      onSubmit({ ...newReview, id: uuidv4() })
+      history.push('/')
+    }
   }
+
+  useEffect(() => {
+    if (editReviewState) {
+      setValue('title', editReviewState.title)
+      setValue('rating', editReviewState.rating)
+      setValue('category', editReviewState.category)
+      setValue('subcategory', editReviewState.subcategory)
+      setValue('summary', editReviewState.summary)
+      setValue('lessons', editReviewState.lessons)
+    }
+  }, [editReviewState, setValue])
   return (
     <StyledForm onSubmit={handleSubmit(onFormSubmit)}>
       <label>

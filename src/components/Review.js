@@ -11,13 +11,14 @@ export default function Review({
   onRemove,
   onEdit,
   id,
+  editedReview,
 }) {
   return (
     <StyledReview>
       <DeleteButton type="button" onClick={() => onRemove(id)}>
         x
       </DeleteButton>
-      <EditButton type="button" onClick={() => onEdit(id)}>
+      <EditButton type="button" onClick={() => onEdit(editedReview)}>
         Edit
       </EditButton>
       <h2>{title}</h2>
