@@ -92,7 +92,9 @@ export default function Form({
 
       <ButtonGroup>
         <NavLink exact to="/">
-          <button type="reset">Cancel</button>
+          <button type="reset" onClick={() => setEditReviewState(undefined)}>
+            Cancel
+          </button>
         </NavLink>
         <button type="submit">Submit</button>
       </ButtonGroup>
