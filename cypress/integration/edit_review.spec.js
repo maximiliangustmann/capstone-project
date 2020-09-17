@@ -1,11 +1,11 @@
 /// <reference types="cypress" />
 
-context('Delete review', () => {
+context('Edit review', () => {
   beforeEach(() => {
     cy.visit('http://localhost:3000/')
   })
 
-  it('deletes review', () => {
+  it('edits review', () => {
     cy.get('button').contains('Create new review').click()
 
     cy.get('label').contains('Title').find('input').type('TestTitle')
@@ -30,9 +30,34 @@ context('Delete review', () => {
     cy.get('section')
       .contains('TestTitle')
       .siblings('button')
-      .contains('x')
+      .contains('Edit')
       .click()
 
-    cy.contains('TestTitle').should('not.exist')
+    cy.get('label')
+      .contains('Title')
+      .find('input')
+      .should('have.value', 'TestTitle')
+
+    cy.get('label').contains('Rating').find('input').should('have.value', '30')
+
+    cy.get('label')
+      .contains('Category')
+      .find('input')
+      .should('have.value', 'TestCategory')
+
+    cy.get('label')
+      .contains('Subcategory')
+      .find('input')
+      .should('have.value', 'TestSubcategory')
+
+    cy.get('label')
+      .contains('Summary')
+      .find('input')
+      .should('have.value', 'TestSummary')
+
+    cy.get('label')
+      .contains('Lessons')
+      .find('input')
+      .should('have.value', 'TestLessons')
   })
 })
