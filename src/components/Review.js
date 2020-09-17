@@ -9,6 +9,7 @@ export default function Review({
   summary,
   lessons,
   onRemove,
+  onEdit,
   id,
 }) {
   return (
@@ -16,6 +17,9 @@ export default function Review({
       <DeleteButton type="button" onClick={() => onRemove(id)}>
         x
       </DeleteButton>
+      <EditButton type="button" onClick={() => onEdit(id)}>
+        Edit
+      </EditButton>
       <h2>{title}</h2>
       <p>Rating: {rating}</p>
       <h3>{category}</h3>
@@ -41,4 +45,12 @@ const DeleteButton = styled.button`
   position: absolute;
   top: 5px;
   right: 5px;
+`
+
+const EditButton = styled.button`
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 5px;
+  left: 5px;
 `

@@ -5,14 +5,28 @@ import Dashboard from './pages/Dashboard'
 import useReviews from './hooks/useReviews'
 
 export default function App() {
-  const { reviews, addReview, removeReview } = useReviews()
+  const {
+    reviews,
+    editReviewState,
+    setEditReviewState,
+    addReview,
+    removeReview,
+    editReview,
+    onEdit,
+  } = useReviews()
+
   return (
     <Switch>
       <Route exact path="/">
-        <Dashboard reviews={reviews} onRemove={removeReview} />
+        <Dashboard reviews={reviews} onRemove={removeReview} onEdit={onEdit} />
       </Route>
       <Route path="/create">
-        <Form onSubmit={addReview} />
+        <Form
+          onSubmit={addReview}
+          editReview={editReview}
+          editReviewState={editReviewState}
+          setEditReviewState={setEditReviewState}
+        />
       </Route>
     </Switch>
   )

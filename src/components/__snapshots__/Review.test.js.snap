@@ -2,8 +2,22 @@
 
 exports[`Review renders correctly 1`] = `
 <section
-  className="Review__StyledReview-ip4zvc-0 iANspQ"
+  className="Review__StyledReview-ip4zvc-0 fzxjZU"
 >
+  <button
+    className="Review__DeleteButton-ip4zvc-1 loySqP"
+    onClick={[Function]}
+    type="button"
+  >
+    x
+  </button>
+  <button
+    className="Review__EditButton-ip4zvc-2 hXiVsC"
+    onClick={[Function]}
+    type="button"
+  >
+    Edit
+  </button>
   <h2 />
   <p>
     Rating: 
