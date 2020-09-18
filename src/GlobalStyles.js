@@ -7,7 +7,7 @@ export default createGlobalStyle`
 }
 body {
     font-size: 112.5%;
-    background: linear-gradient(#00001D , #00000B);
+    background: linear-gradient(180deg, rgba(0,0,29,1), rgba(0,0,11,1));
     margin: 0;
     padding: 0;
     
