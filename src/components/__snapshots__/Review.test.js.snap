@@ -2,35 +2,63 @@
 
 exports[`Review renders correctly 1`] = `
 <section
-  className="Review__StyledReview-ip4zvc-0 fzxjZU"
+  className="Review__StyledReview-ip4zvc-0 kqolAA"
 >
   <button
-    className="Review__DeleteButton-ip4zvc-1 loySqP"
+    className="Review__DeleteButton-ip4zvc-1 jTktaU"
+    data-cy="delete"
     onClick={[Function]}
     type="button"
   >
-    x
+    <svg
+      className="Review__DeleteIcon-ip4zvc-10 ieyOZN"
+    >
+      delete.svg
+    </svg>
   </button>
   <button
-    className="Review__EditButton-ip4zvc-2 hXiVsC"
+    className="Review__EditButton-ip4zvc-2 gtxEos"
+    data-cy="edit"
     onClick={[Function]}
     type="button"
   >
-    Edit
+    <svg
+      className="Review__EditIcon-ip4zvc-9 eLorlz"
+    >
+      edit.svg
+    </svg>
   </button>
-  <h2 />
-  <p>
-    Rating: 
-  </p>
-  <h3 />
-  <h4 />
-  <h3>
-    Summary: 
+  <h2
+    className="Review__Title-ip4zvc-3 QeWEj"
+  />
+  <div
+    className="Review__Tags-ip4zvc-4 bMeKkt"
+  >
+    <button
+      className="Review__Tag-ip4zvc-5 dErket"
+    />
+    <button
+      className="Review__Tag-ip4zvc-5 dErket"
+    />
+    <button
+      className="Review__Tag-ip4zvc-5 dErket"
+    />
+  </div>
+  <h3
+    className="Review__Summary-ip4zvc-6 iDpXoF"
+  >
+    Summary 
   </h3>
-  <p />
-  <h3>
-    Lessons: 
+  <p
+    className="Review__ReviewText-ip4zvc-8 gMOuPx"
+  />
+  <h3
+    className="Review__Lessons-ip4zvc-7 bsVGYp"
+  >
+    Lessons 
   </h3>
-  <p />
+  <p
+    className="Review__ReviewText-ip4zvc-8 gMOuPx"
+  />
 </section>
 `;
