@@ -19,9 +19,9 @@ context('Create review', () => {
       .find('input')
       .type('TestSubcategory')
 
-    cy.get('label').contains('Summary').find('input').type('TestSummary')
+    cy.get('label').contains('Summary').find('textarea').type('TestSummary')
 
-    cy.get('label').contains('Lessons').find('input').type('TestLessons')
+    cy.get('label').contains('Lessons').find('textarea').type('TestLessons')
 
     cy.get('button').contains('Submit').click()
 
@@ -49,9 +49,9 @@ context('Create review', () => {
       .find('input')
       .type('TestSubcategory')
 
-    cy.get('label').contains('Summary').find('input').type('TestSummary')
+    cy.get('label').contains('Summary').find('textarea').type('TestSummary')
 
-    cy.get('label').contains('Lessons').find('input').type('TestLessons')
+    cy.get('label').contains('Lessons').find('textarea').type('TestLessons')
 
     cy.get('button').contains('Cancel').click()
 
@@ -77,9 +77,9 @@ context('Create review', () => {
       .find('input')
       .type('TestSubcategory')
 
-    cy.get('label').contains('Summary').find('input').type('TestSummary')
+    cy.get('label').contains('Summary').find('textarea').type('TestSummary')
 
-    cy.get('label').contains('Lessons').find('input').type('TestLessons')
+    cy.get('label').contains('Lessons').find('textarea').type('TestLessons')
 
     cy.get('button').contains('Submit').click()
 
@@ -101,9 +101,9 @@ context('Create review', () => {
       .find('input')
       .type('TestSubcategory')
 
-    cy.get('label').contains('Summary').find('input').type('TestSummary')
+    cy.get('label').contains('Summary').find('textarea').type('TestSummary')
 
-    cy.get('label').contains('Lessons').find('input').type('TestLessons')
+    cy.get('label').contains('Lessons').find('textarea').type('TestLessons')
 
     cy.get('button').contains('Submit').click()
 
@@ -122,9 +122,9 @@ context('Create review', () => {
       .find('input')
       .type('TestSubcategory')
 
-    cy.get('label').contains('Summary').find('input').type('TestSummary')
+    cy.get('label').contains('Summary').find('textarea').type('TestSummary')
 
-    cy.get('label').contains('Lessons').find('input').type('TestLessons')
+    cy.get('label').contains('Lessons').find('textarea').type('TestLessons')
 
     cy.get('button').contains('Submit').click()
 
@@ -143,9 +143,9 @@ context('Create review', () => {
       .find('input')
       .type('TestSubcategory')
 
-    cy.get('label').contains('Summary').find('input').type('TestSummary')
+    cy.get('label').contains('Summary').find('textarea').type('TestSummary')
 
-    cy.get('label').contains('Lessons').find('input').type('TestLessons')
+    cy.get('label').contains('Lessons').find('textarea').type('TestLessons')
 
     cy.get('button').contains('Submit').click()
 
@@ -164,9 +164,9 @@ context('Create review', () => {
       .find('input')
       .type('TestSubcategory')
 
-    cy.get('label').contains('Summary').find('input').type('TestSummary')
+    cy.get('label').contains('Summary').find('textarea').type('TestSummary')
 
-    cy.get('label').contains('Lessons').find('input').type('TestLessons')
+    cy.get('label').contains('Lessons').find('textarea').type('TestLessons')
 
     cy.get('button').contains('Submit').click()
 
@@ -182,9 +182,9 @@ context('Create review', () => {
 
     cy.get('label').contains('Category').find('input').type('TestCategory')
 
-    cy.get('label').contains('Summary').find('input').type('TestSummary')
+    cy.get('label').contains('Summary').find('textarea').type('TestSummary')
 
-    cy.get('label').contains('Lessons').find('input').type('TestLessons')
+    cy.get('label').contains('Lessons').find('textarea').type('TestLessons')
 
     cy.get('button').contains('Submit').click()
 
@@ -205,7 +205,7 @@ context('Create review', () => {
       .find('input')
       .type('TestSubcategory')
 
-    cy.get('label').contains('Lessons').find('input').type('TestLessons')
+    cy.get('label').contains('Lessons').find('textarea').type('TestLessons')
 
     cy.get('button').contains('Submit').click()
 
@@ -226,7 +226,7 @@ context('Create review', () => {
       .find('input')
       .type('TestSubcategory')
 
-    cy.get('label').contains('Summary').find('input').type('TestSummary')
+    cy.get('label').contains('Summary').find('textarea').type('TestSummary')
 
     cy.get('button').contains('Submit').click()
 
