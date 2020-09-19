@@ -18,8 +18,8 @@ const Button = styled.button`
     rgba(241, 61, 60, 1),
     rgba(121, 31, 30, 1)
   );
-  box-shadow: 0 0 50px -10px #f13d3c;
-  font-size: 22px;
+  box-shadow: 0 0 50px #f13d3c80;
+  font-size: 22pt;
   color: #f4f4f4;
   font-weight: 900;
   padding: 20px;
