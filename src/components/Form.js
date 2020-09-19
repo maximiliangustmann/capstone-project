@@ -133,6 +133,8 @@ const StyledForm = styled.form`
 const Input = styled.input`
   background-color: #f4f4f4;
   color: #00001d;
+  font-size: 16px;
+  font-weight: 300;
   width: 100%;
   margin: 0;
 `
@@ -140,6 +142,8 @@ const Input = styled.input`
 const Textarea = styled.textarea`
   background-color: #f4f4f4;
   color: #00001d;
+  font-size: 16px;
+  font-weight: 300;
   width: 100%;
   margin: 0;
 `
