@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components/macro'
+import { ReactComponent as Edit } from '../img/edit.svg'
+import { ReactComponent as Delete } from '../img/delete.svg'
 
 export default function Review({
   title,
@@ -15,10 +17,10 @@ export default function Review({
   return (
     <StyledReview>
       <DeleteButton type="button" onClick={() => onRemove(id)}>
-        x
+        <DeleteIcon />
       </DeleteButton>
       <EditButton type="button" onClick={() => onEdit(id)}>
-        Edit
+        <EditIcon />
       </EditButton>
       <Title>{title}</Title>
       <Tags>
@@ -50,18 +52,22 @@ const StyledReview = styled.section`
 
 const DeleteButton = styled.button`
   border: none;
-  background-color: transparent;
+  border-radius: 50%;
+  background-color: #f13d3c;
+  padding: 20px;
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: -10px;
+  right: -10px;
 `
 
 const EditButton = styled.button`
   border: none;
-  background-color: transparent;
+  border-radius: 50%;
+  background-color: #52c397;
+  padding: 20px;
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: -10px;
+  left: -10px;
 `
 
 const Title = styled.h2`
@@ -103,4 +109,20 @@ const Lessons = styled.h3`
 const ReviewText = styled.p`
   font-size: 16px;
   font-weight: 300;
+`
+
+const EditIcon = styled(Edit)`
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 50%;
+  width: 50%;
+`
+
+const DeleteIcon = styled(Delete)`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 50%;
+  width: 50%;
 `
