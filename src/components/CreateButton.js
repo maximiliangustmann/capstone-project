@@ -4,11 +4,17 @@ import styled from 'styled-components/macro'
 
 export default function CreateButton() {
   return (
-    <NavLink to="/create">
+    <StyledNavLink to="/create">
       <Button>Create new review</Button>
-    </NavLink>
+    </StyledNavLink>
   )
 }
+
+const StyledNavLink = styled(NavLink)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
 
 const Button = styled.button`
   border-radius: 50px;
@@ -23,5 +29,5 @@ const Button = styled.button`
   color: #f4f4f4;
   font-weight: 900;
   padding: 20px;
-  margin: 40px;
+  margin: 30px 40px 20px;
 `

@@ -37,7 +37,7 @@ export default function Review({
 }
 
 const StyledReview = styled.section`
-  margin: 30px 43px;
+  margin: 40px 43px;
   padding: 30px 32px;
   position: relative;
   background: linear-gradient(
