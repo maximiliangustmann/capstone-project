@@ -36,25 +36,25 @@ export default function Form({
   }, [editReviewState, setValue])
   return (
     <StyledForm onSubmit={handleSubmit(onFormSubmit)}>
-      <label>
+      <Label>
         Title
         <Input
           autoFocus
           name="title"
           ref={register({ required: true, pattern: /.*\S.*/ })}
         />
-      </label>
+      </Label>
       {errors.title && errors.title.type === 'required' && (
         <ErrorMessage>Title is required!</ErrorMessage>
       )}
 
-      <label>
+      <Label>
         Rating (1-100)
         <Input
           name="rating"
           ref={register({ required: true, pattern: /^[1-9][0-9]?$|^100$/ })}
         />
-      </label>
+      </Label>
       {errors.rating && errors.rating.type === 'required' && (
         <ErrorMessage>Rating is required!</ErrorMessage>
       )}
@@ -62,57 +62,62 @@ export default function Form({
         <ErrorMessage>Please choose a number between 1 and 100</ErrorMessage>
       )}
 
-      <label>
+      <Label>
         Category
         <Input
           name="category"
           ref={register({ required: true, pattern: /.*\S.*/ })}
         />
-      </label>
+      </Label>
       {errors.category && errors.category.type === 'required' && (
         <ErrorMessage>Category is required!</ErrorMessage>
       )}
 
-      <label>
+      <Label>
         Subcategory
         <Input
           name="subcategory"
           ref={register({ required: true, pattern: /.*\S.*/ })}
         />
-      </label>
+      </Label>
       {errors.subcategory && errors.subcategory.type === 'required' && (
         <ErrorMessage>Subcategory is required!</ErrorMessage>
       )}
 
-      <label>
+      <Label>
         Summary
-        <Input
+        <Textarea
           name="summary"
+          rows="3"
           ref={register({ required: true, pattern: /.*\S.*/ })}
         />
-      </label>
+      </Label>
       {errors.summary && errors.summary.type === 'required' && (
         <ErrorMessage>Summary is required!</ErrorMessage>
       )}
 
-      <label>
+      <Label>
         Lessons
-        <Input
+        <Textarea
           name="lessons"
+          rows="3"
           ref={register({ required: true, pattern: /.*\S.*/ })}
         />
-      </label>
+      </Label>
       {errors.lessons && errors.lessons.type === 'required' && (
         <ErrorMessage>Lessons is required!</ErrorMessage>
       )}
 
       <ButtonGroup>
         <NavLink exact to="/">
-          <button type="reset" onClick={() => setEditReviewState(undefined)}>
+          <ButtonReset
+            type="reset"
+            onClick={() => setEditReviewState(undefined)}
+          >
             Cancel
-          </button>
+          </ButtonReset>
         </NavLink>
-        <button type="submit">Submit</button>
+        <ButtonSubmit type="submit">Submit</ButtonSubmit>
       </ButtonGroup>
     </StyledForm>
   )
@@ -120,20 +125,34 @@ export default function Form({
 
 const StyledForm = styled.form`
   display: grid;
-  gap: 20px;
+  gap: 32px;
   align-content: start;
-  margin: 20px;
-  padding: 20px;
-  width: 100px;
+  margin: 40px 52px;
 `
 
 const Input = styled.input`
-  margin: 0 20px;
+  background-color: #f4f4f4;
+  color: #00001d;
+  width: 100%;
+  margin: 0;
+`
+
+const Textarea = styled.textarea`
+  background-color: #f4f4f4;
+  color: #00001d;
+  width: 100%;
+  margin: 0;
+`
+
+const Label = styled.label`
+  font-size: 18px;
+  font-weight: 700;
+  color: #f4f4f4;
 `
 
 const ButtonGroup = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 `
 
 const ErrorMessage = styled.p`
@@ -143,4 +162,34 @@ const ErrorMessage = styled.p`
     display: inline;
     content: '⚠ ';
   }
+`
+
+const ButtonReset = styled.button`
+  background: linear-gradient(
+    180deg,
+    rgba(241, 61, 60, 1),
+    rgba(121, 31, 30, 1)
+  );
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 0 30px #f13d3c80;
+  font-size: 22pt;
+  color: #f4f4f4;
+  font-weight: 900;
+  padding: 9px 14px;
+`
+
+const ButtonSubmit = styled.button`
+  background: linear-gradient(
+    180deg,
+    rgba(82, 195, 151, 1),
+    rgba(41, 98, 76, 1)
+  );
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 0 30px #52c39780;
+  font-size: 22pt;
+  color: #f4f4f4;
+  font-weight: 900;
+  padding: 9px 14px;
 `
