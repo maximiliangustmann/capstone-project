@@ -12,7 +12,7 @@ context('Edit review', () => {
 
     cy.get('label').contains('Rating').find('input').type('30')
 
-    cy.get('label').contains('Category').find('input').type('TestCategory')
+    cy.get('label').contains('Category').find('select').select('Film')
 
     cy.get('label')
       .contains('Subcategory')
@@ -38,8 +38,8 @@ context('Edit review', () => {
 
     cy.get('label')
       .contains('Category')
-      .find('input')
-      .should('have.value', 'TestCategory')
+      .find('select')
+      .should('have.value', 'film')
 
     cy.get('label')
       .contains('Subcategory')
