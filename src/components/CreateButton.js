@@ -3,11 +3,7 @@ import { NavLink } from 'react-router-dom'
 import styled from 'styled-components/macro'
 
 export default function CreateButton() {
-  return (
-    <StyledNavLink to="/create">
-      <Button>Create new review</Button>
-    </StyledNavLink>
-  )
+  return <StyledNavLink to="/create">Create new review</StyledNavLink>
 }
 
 const StyledNavLink = styled(NavLink)`
@@ -15,13 +11,10 @@ const StyledNavLink = styled(NavLink)`
   justify-content: center;
   align-items: center;
   text-decoration: none;
-`
-
-const Button = styled.button`
   border-radius: 50px;
   border: none;
   background: var(--gradient-red);
-  box-shadow: var(--shadow-red-50);
+  box-shadow: var(--shadow-red-30);
   font-size: 22pt;
   color: var(--main-white);
   font-weight: 900;

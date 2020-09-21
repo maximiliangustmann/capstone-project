@@ -175,7 +175,7 @@ const ButtonReset = styled.button`
   box-shadow: var(--shadow-red-30);
   font-size: 22pt;
   color: var(--main-white);
-  font-weight: 900;
+  font-weight: 500;
   padding: 9px 14px;
 `
 
@@ -186,6 +186,6 @@ const ButtonSubmit = styled.button`
   box-shadow: var(--shadow-green);
   font-size: 22pt;
   color: var(--main-white);
-  font-weight: 900;
+  font-weight: 500;
   padding: 9px 14px;
 `
