@@ -6,7 +6,7 @@ context('Delete review', () => {
   })
 
   it('deletes review', () => {
-    cy.get('button').contains('Create new review').click()
+    cy.get('[data-cy=create]').click()
 
     cy.get('label').contains('Title').find('input').type('TestTitle')
 
@@ -19,19 +19,13 @@ context('Delete review', () => {
       .find('input')
       .type('TestSubcategory')
 
-    cy.get('label').contains('Summary').find('input').type('TestSummary')
+    cy.get('label').contains('Summary').find('textarea').type('TestSummary')
 
-    cy.get('label').contains('Lessons').find('input').type('TestLessons')
+    cy.get('label').contains('Lessons').find('textarea').type('TestLessons')
 
     cy.get('button').contains('Submit').click()
 
-    cy.get('h2').contains('TestTitle')
-
-    cy.get('section')
-      .contains('TestTitle')
-      .siblings('button')
-      .contains('x')
-      .click()
+    cy.get('[data-cy=delete]').click()
 
     cy.contains('TestTitle').should('not.exist')
   })

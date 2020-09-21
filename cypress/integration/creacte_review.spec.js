@@ -6,7 +6,7 @@ context('Create review', () => {
   })
 
   it('submits a new review', () => {
-    cy.get('button').contains('Create new review').click()
+    cy.get('[data-cy=create]').click()
 
     cy.get('label').contains('Title').find('input').type('TestTitle')
 
@@ -19,15 +19,15 @@ context('Create review', () => {
       .find('input')
       .type('TestSubcategory')
 
-    cy.get('label').contains('Summary').find('input').type('TestSummary')
+    cy.get('label').contains('Summary').find('textarea').type('TestSummary')
 
-    cy.get('label').contains('Lessons').find('input').type('TestLessons')
+    cy.get('label').contains('Lessons').find('textarea').type('TestLessons')
 
     cy.get('button').contains('Submit').click()
 
     cy.get('h2').contains('TestTitle')
 
-    cy.get('button').contains('Create new review').click()
+    cy.get('[data-cy=create]').click()
 
     cy.get('label')
       .contains('Title')
@@ -36,7 +36,7 @@ context('Create review', () => {
   })
 
   it('cancels a new review', () => {
-    cy.get('button').contains('Create new review').click()
+    cy.get('[data-cy=create]').click()
 
     cy.get('label').contains('Title').find('input').type('TestTitle')
 
@@ -49,13 +49,13 @@ context('Create review', () => {
       .find('input')
       .type('TestSubcategory')
 
-    cy.get('label').contains('Summary').find('input').type('TestSummary')
+    cy.get('label').contains('Summary').find('textarea').type('TestSummary')
 
-    cy.get('label').contains('Lessons').find('input').type('TestLessons')
+    cy.get('label').contains('Lessons').find('textarea').type('TestLessons')
 
     cy.get('button').contains('Cancel').click()
 
-    cy.get('button').contains('Create new review').click()
+    cy.get('[data-cy=create]').click()
 
     cy.get('label')
       .contains('Title')
@@ -64,7 +64,7 @@ context('Create review', () => {
   })
 
   it('saves in local storage', () => {
-    cy.get('button').contains('Create new review').click()
+    cy.get('[data-cy=create]').click()
 
     cy.get('label').contains('Title').find('input').type('TestTitle')
 
@@ -77,9 +77,9 @@ context('Create review', () => {
       .find('input')
       .type('TestSubcategory')
 
-    cy.get('label').contains('Summary').find('input').type('TestSummary')
+    cy.get('label').contains('Summary').find('textarea').type('TestSummary')
 
-    cy.get('label').contains('Lessons').find('input').type('TestLessons')
+    cy.get('label').contains('Lessons').find('textarea').type('TestLessons')
 
     cy.get('button').contains('Submit').click()
 
@@ -89,7 +89,7 @@ context('Create review', () => {
   })
 
   it('validates wrong rating pattern', () => {
-    cy.get('button').contains('Create new review').click()
+    cy.get('[data-cy=create]').click()
 
     cy.get('label').contains('Title').find('input').type('TestTitle')
 
@@ -101,9 +101,9 @@ context('Create review', () => {
       .find('input')
       .type('TestSubcategory')
 
-    cy.get('label').contains('Summary').find('input').type('TestSummary')
+    cy.get('label').contains('Summary').find('textarea').type('TestSummary')
 
-    cy.get('label').contains('Lessons').find('input').type('TestLessons')
+    cy.get('label').contains('Lessons').find('textarea').type('TestLessons')
 
     cy.get('button').contains('Submit').click()
 
@@ -111,7 +111,7 @@ context('Create review', () => {
   })
 
   it('validates missing title input', () => {
-    cy.get('button').contains('Create new review').click()
+    cy.get('[data-cy=create]').click()
 
     cy.get('label').contains('Rating').find('input').type('30')
 
@@ -122,9 +122,9 @@ context('Create review', () => {
       .find('input')
       .type('TestSubcategory')
 
-    cy.get('label').contains('Summary').find('input').type('TestSummary')
+    cy.get('label').contains('Summary').find('textarea').type('TestSummary')
 
-    cy.get('label').contains('Lessons').find('input').type('TestLessons')
+    cy.get('label').contains('Lessons').find('textarea').type('TestLessons')
 
     cy.get('button').contains('Submit').click()
 
@@ -132,7 +132,7 @@ context('Create review', () => {
   })
 
   it('validates missing rating input', () => {
-    cy.get('button').contains('Create new review').click()
+    cy.get('[data-cy=create]').click()
 
     cy.get('label').contains('Title').find('input').type('TestTitle')
 
@@ -143,9 +143,9 @@ context('Create review', () => {
       .find('input')
       .type('TestSubcategory')
 
-    cy.get('label').contains('Summary').find('input').type('TestSummary')
+    cy.get('label').contains('Summary').find('textarea').type('TestSummary')
 
-    cy.get('label').contains('Lessons').find('input').type('TestLessons')
+    cy.get('label').contains('Lessons').find('textarea').type('TestLessons')
 
     cy.get('button').contains('Submit').click()
 
@@ -153,7 +153,7 @@ context('Create review', () => {
   })
 
   it('validates missing category input', () => {
-    cy.get('button').contains('Create new review').click()
+    cy.get('[data-cy=create]').click()
 
     cy.get('label').contains('Title').find('input').type('TestTitle')
 
@@ -164,9 +164,9 @@ context('Create review', () => {
       .find('input')
       .type('TestSubcategory')
 
-    cy.get('label').contains('Summary').find('input').type('TestSummary')
+    cy.get('label').contains('Summary').find('textarea').type('TestSummary')
 
-    cy.get('label').contains('Lessons').find('input').type('TestLessons')
+    cy.get('label').contains('Lessons').find('textarea').type('TestLessons')
 
     cy.get('button').contains('Submit').click()
 
@@ -174,7 +174,7 @@ context('Create review', () => {
   })
 
   it('validates missing subcategory input', () => {
-    cy.get('button').contains('Create new review').click()
+    cy.get('[data-cy=create]').click()
 
     cy.get('label').contains('Title').find('input').type('TestTitle')
 
@@ -182,9 +182,9 @@ context('Create review', () => {
 
     cy.get('label').contains('Category').find('input').type('TestCategory')
 
-    cy.get('label').contains('Summary').find('input').type('TestSummary')
+    cy.get('label').contains('Summary').find('textarea').type('TestSummary')
 
-    cy.get('label').contains('Lessons').find('input').type('TestLessons')
+    cy.get('label').contains('Lessons').find('textarea').type('TestLessons')
 
     cy.get('button').contains('Submit').click()
 
@@ -192,7 +192,7 @@ context('Create review', () => {
   })
 
   it('validates missing summary input', () => {
-    cy.get('button').contains('Create new review').click()
+    cy.get('[data-cy=create]').click()
 
     cy.get('label').contains('Title').find('input').type('TestTitle')
 
@@ -205,7 +205,7 @@ context('Create review', () => {
       .find('input')
       .type('TestSubcategory')
 
-    cy.get('label').contains('Lessons').find('input').type('TestLessons')
+    cy.get('label').contains('Lessons').find('textarea').type('TestLessons')
 
     cy.get('button').contains('Submit').click()
 
@@ -213,7 +213,7 @@ context('Create review', () => {
   })
 
   it('validates missing lessons input', () => {
-    cy.get('button').contains('Create new review').click()
+    cy.get('[data-cy=create]').click()
 
     cy.get('label').contains('Title').find('input').type('TestTitle')
 
@@ -226,7 +226,7 @@ context('Create review', () => {
       .find('input')
       .type('TestSubcategory')
 
-    cy.get('label').contains('Summary').find('input').type('TestSummary')
+    cy.get('label').contains('Summary').find('textarea').type('TestSummary')
 
     cy.get('button').contains('Submit').click()
 

@@ -2,54 +2,68 @@
 
 exports[`Form renders correctly 1`] = `
 <form
-  className="Form__StyledForm-fle9al-0 giVqvM"
+  className="Form__StyledForm-fle9al-0 dRwVIS"
   onSubmit={[Function]}
 >
-  <label>
+  <label
+    className="Form__Label-fle9al-3 hIBhbJ"
+  >
     Title
     <input
       autoFocus={true}
-      className="Form__Input-fle9al-1 jjijvg"
+      className="Form__Input-fle9al-1 bBpFHv"
       name="title"
     />
   </label>
-  <label>
+  <label
+    className="Form__Label-fle9al-3 hIBhbJ"
+  >
     Rating (1-100)
     <input
-      className="Form__Input-fle9al-1 jjijvg"
+      className="Form__Input-fle9al-1 bBpFHv"
       name="rating"
     />
   </label>
-  <label>
+  <label
+    className="Form__Label-fle9al-3 hIBhbJ"
+  >
     Category
     <input
-      className="Form__Input-fle9al-1 jjijvg"
+      className="Form__Input-fle9al-1 bBpFHv"
       name="category"
     />
   </label>
-  <label>
+  <label
+    className="Form__Label-fle9al-3 hIBhbJ"
+  >
     Subcategory
     <input
-      className="Form__Input-fle9al-1 jjijvg"
+      className="Form__Input-fle9al-1 bBpFHv"
       name="subcategory"
     />
   </label>
-  <label>
+  <label
+    className="Form__Label-fle9al-3 hIBhbJ"
+  >
     Summary
-    <input
-      className="Form__Input-fle9al-1 jjijvg"
+    <textarea
+      className="Form__Textarea-fle9al-2 VtOfI"
       name="summary"
+      rows="3"
     />
   </label>
-  <label>
+  <label
+    className="Form__Label-fle9al-3 hIBhbJ"
+  >
     Lessons
-    <input
-      className="Form__Input-fle9al-1 jjijvg"
+    <textarea
+      className="Form__Textarea-fle9al-2 VtOfI"
       name="lessons"
+      rows="3"
     />
   </label>
   <div
-    className="Form__ButtonGroup-fle9al-2 dhPGVu"
+    className="Form__ButtonGroup-fle9al-4 ffptUz"
   >
     <a
       aria-current="page"
@@ -59,6 +73,7 @@ exports[`Form renders correctly 1`] = `
       style={Object {}}
     >
       <button
+        className="Form__ButtonReset-fle9al-6 jucpAO"
         onClick={[Function]}
         type="reset"
       >
@@ -66,6 +81,7 @@ exports[`Form renders correctly 1`] = `
       </button>
     </a>
     <button
+      className="Form__ButtonSubmit-fle9al-7 hLUljk"
       type="submit"
     >
       Submit

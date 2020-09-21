@@ -3,11 +3,11 @@
 exports[`CreateButton renders correctly 1`] = `
 <a
   aria-current={null}
+  className="CreateButton__StyledNavLink-sc-4mhuep-0 ihrlzj"
+  data-cy="create"
   href="/create"
   onClick={[Function]}
 >
-  <button>
-    Create new review
-  </button>
+  Create new review
 </a>
 `;
