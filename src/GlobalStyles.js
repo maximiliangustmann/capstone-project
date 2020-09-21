@@ -6,11 +6,13 @@ export default createGlobalStyle`
     font-family: "Roboto", sans-serif;
 }
 body {
-    background: var(--gradient-black);
     margin: 0;
     padding: 0;
+    background: var(--gradient-black);
+    height: 100vh;
     
 }
+
 
 :root {
     
