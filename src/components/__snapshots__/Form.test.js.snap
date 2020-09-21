@@ -6,58 +6,58 @@ exports[`Form renders correctly 1`] = `
   onSubmit={[Function]}
 >
   <label
-    className="Form__Label-fle9al-3 fFmurF"
+    className="Form__Label-fle9al-3 hIBhbJ"
   >
     Title
     <input
       autoFocus={true}
-      className="Form__Input-fle9al-1 bLmAEM"
+      className="Form__Input-fle9al-1 bBpFHv"
       name="title"
     />
   </label>
   <label
-    className="Form__Label-fle9al-3 fFmurF"
+    className="Form__Label-fle9al-3 hIBhbJ"
   >
     Rating (1-100)
     <input
-      className="Form__Input-fle9al-1 bLmAEM"
+      className="Form__Input-fle9al-1 bBpFHv"
       name="rating"
     />
   </label>
   <label
-    className="Form__Label-fle9al-3 fFmurF"
+    className="Form__Label-fle9al-3 hIBhbJ"
   >
     Category
     <input
-      className="Form__Input-fle9al-1 bLmAEM"
+      className="Form__Input-fle9al-1 bBpFHv"
       name="category"
     />
   </label>
   <label
-    className="Form__Label-fle9al-3 fFmurF"
+    className="Form__Label-fle9al-3 hIBhbJ"
   >
     Subcategory
     <input
-      className="Form__Input-fle9al-1 bLmAEM"
+      className="Form__Input-fle9al-1 bBpFHv"
       name="subcategory"
     />
   </label>
   <label
-    className="Form__Label-fle9al-3 fFmurF"
+    className="Form__Label-fle9al-3 hIBhbJ"
   >
     Summary
     <textarea
-      className="Form__Textarea-fle9al-2 ibKAMP"
+      className="Form__Textarea-fle9al-2 VtOfI"
       name="summary"
       rows="3"
     />
   </label>
   <label
-    className="Form__Label-fle9al-3 fFmurF"
+    className="Form__Label-fle9al-3 hIBhbJ"
   >
     Lessons
     <textarea
-      className="Form__Textarea-fle9al-2 ibKAMP"
+      className="Form__Textarea-fle9al-2 VtOfI"
       name="lessons"
       rows="3"
     />
@@ -73,7 +73,7 @@ exports[`Form renders correctly 1`] = `
       style={Object {}}
     >
       <button
-        className="Form__ButtonReset-fle9al-6 gotNCR"
+        className="Form__ButtonReset-fle9al-6 hTnOYe"
         onClick={[Function]}
         type="reset"
       >
@@ -81,7 +81,7 @@ exports[`Form renders correctly 1`] = `
       </button>
     </a>
     <button
-      className="Form__ButtonSubmit-fle9al-7 dWyBKa"
+      className="Form__ButtonSubmit-fle9al-7 Ipdfo"
       type="submit"
     >
       Submit

@@ -8,7 +8,7 @@ exports[`CreateButton renders correctly 1`] = `
   onClick={[Function]}
 >
   <button
-    className="CreateButton__Button-sc-4mhuep-1 bGbYpS"
+    className="CreateButton__Button-sc-4mhuep-1 inlHjR"
   >
     Create new review
   </button>

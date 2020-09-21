@@ -2,10 +2,10 @@
 
 exports[`Review renders correctly 1`] = `
 <section
-  className="Review__StyledReview-ip4zvc-0 kqolAA"
+  className="Review__StyledReview-ip4zvc-0 iaQwdY"
 >
   <button
-    className="Review__DeleteButton-ip4zvc-1 jTktaU"
+    className="Review__DeleteButton-ip4zvc-1 iVYRxG"
     data-cy="delete"
     onClick={[Function]}
     type="button"
@@ -17,7 +17,7 @@ exports[`Review renders correctly 1`] = `
     </svg>
   </button>
   <button
-    className="Review__EditButton-ip4zvc-2 gtxEos"
+    className="Review__EditButton-ip4zvc-2 gGTXNT"
     data-cy="edit"
     onClick={[Function]}
     type="button"
