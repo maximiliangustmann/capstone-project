@@ -131,8 +131,8 @@ const StyledForm = styled.form`
 `
 
 const Input = styled.input`
-  background-color: #f4f4f4;
-  color: #00001d;
+  background-color: var(--main-white);
+  color: var(--main-black);
   font-size: 16px;
   font-weight: 300;
   width: 100%;
@@ -140,8 +140,8 @@ const Input = styled.input`
 `
 
 const Textarea = styled.textarea`
-  background-color: #f4f4f4;
-  color: #00001d;
+  background-color: var(--main-white);
+  color: var(--main-black);
   font-size: 16px;
   font-weight: 300;
   width: 100%;
@@ -151,7 +151,7 @@ const Textarea = styled.textarea`
 const Label = styled.label`
   font-size: 18px;
   font-weight: 700;
-  color: #f4f4f4;
+  color: var(--main-white);
 `
 
 const ButtonGroup = styled.div`
@@ -169,31 +169,23 @@ const ErrorMessage = styled.p`
 `
 
 const ButtonReset = styled.button`
-  background: linear-gradient(
-    180deg,
-    rgba(241, 61, 60, 1),
-    rgba(121, 31, 30, 1)
-  );
+  background: var(--gradient-red);
   border: none;
   border-radius: 50px;
-  box-shadow: 0 0 30px #f13d3c80;
+  box-shadow: var(--shadow-red-30);
   font-size: 22pt;
-  color: #f4f4f4;
+  color: var(--main-white);
   font-weight: 900;
   padding: 9px 14px;
 `
 
 const ButtonSubmit = styled.button`
-  background: linear-gradient(
-    180deg,
-    rgba(82, 195, 151, 1),
-    rgba(41, 98, 76, 1)
-  );
+  background: var(--gradient-green);
   border: none;
   border-radius: 50px;
-  box-shadow: 0 0 30px #52c39780;
+  box-shadow: var(--shadow-green);
   font-size: 22pt;
-  color: #f4f4f4;
+  color: var(--main-white);
   font-weight: 900;
   padding: 9px 14px;
 `

@@ -40,20 +40,16 @@ const StyledReview = styled.section`
   margin: 40px 43px;
   padding: 30px 32px;
   position: relative;
-  background: linear-gradient(
-    180deg,
-    rgba(244, 244, 244, 1),
-    rgba(181, 181, 181, 1)
-  );
+  background: var(--gradient-white);
   border-radius: 20px;
-  box-shadow: 10px 10px 50px #f13d3c4d;
-  color: #00001d;
+  box-shadow: var(--shadow-red-review);
+  color: var(--main-black);
 `
 
 const DeleteButton = styled.button`
   border: none;
   border-radius: 50%;
-  background-color: #f13d3c;
+  background-color: var(--main-red);
   padding: 20px;
   position: absolute;
   top: -10px;
@@ -63,7 +59,7 @@ const DeleteButton = styled.button`
 const EditButton = styled.button`
   border: none;
   border-radius: 50%;
-  background-color: #52c397;
+  background-color: var(--main-green);
   padding: 20px;
   position: absolute;
   top: -10px;
