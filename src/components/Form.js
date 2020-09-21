@@ -64,10 +64,7 @@ export default function Form({
 
       <Label>
         Category
-        <Select
-          name="category"
-          ref={register({ required: true, pattern: /.*\S.*/ })}
-        >
+        <Select name="category" ref={register({ required: true })}>
           <option value="book">Book</option>
           <option value="audiobook">Audiobook</option>
           <option value="podcast">Podcast</option>
