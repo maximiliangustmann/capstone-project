@@ -3,7 +3,11 @@ import { NavLink } from 'react-router-dom'
 import styled from 'styled-components/macro'
 
 export default function CreateButton() {
-  return <StyledNavLink to="/create">Create new review</StyledNavLink>
+  return (
+    <StyledNavLink data-cy="create" to="/create">
+      Create new review
+    </StyledNavLink>
+  )
 }
 
 const StyledNavLink = styled(NavLink)`
