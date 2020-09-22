@@ -46,7 +46,7 @@ const mockData = [
 
 context('Filter reviews', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000/')
+    cy.visit('/')
   })
   it('filter reviews', () => {
     mockData.forEach((data) => {
