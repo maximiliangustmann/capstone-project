@@ -11,7 +11,7 @@ const Template = (args) => <Review {...args} />
 export const singleReview = Template.bind({})
 singleReview.args = {
   title: 'The 4-hour work week',
-  rating: '9.7',
+  rating: '97',
   category: 'Book',
   subcategory: 'Non-fiction',
   summary: 'Guide to life your dreamlife',
