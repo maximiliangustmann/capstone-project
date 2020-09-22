@@ -36,6 +36,7 @@ exports[`Review renders correctly 1`] = `
   >
     <button
       className="Review__Tag-ip4zvc-5 dErket"
+      data-cy="category"
     />
     <button
       className="Review__Tag-ip4zvc-5 dErket"

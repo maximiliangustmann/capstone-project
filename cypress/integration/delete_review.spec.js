@@ -2,7 +2,7 @@
 
 context('Delete review', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000/')
+    cy.visit('/')
   })
 
   it('deletes review', () => {

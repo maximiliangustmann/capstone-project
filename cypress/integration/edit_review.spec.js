@@ -2,7 +2,7 @@
 
 context('Edit review', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000/')
+    cy.visit('/')
   })
 
   it('edits review', () => {
@@ -39,7 +39,7 @@ context('Edit review', () => {
     cy.get('label')
       .contains('Category')
       .find('select')
-      .should('have.value', 'film')
+      .should('have.value', 'Film')
 
     cy.get('label')
       .contains('Subcategory')

@@ -65,11 +65,11 @@ export default function Form({
       <Label>
         Category
         <Select name="category" ref={register({ required: true })}>
-          <option value="book">Book</option>
-          <option value="audiobook">Audiobook</option>
-          <option value="podcast">Podcast</option>
-          <option value="film">Film</option>
-          <option value="series">Series</option>
+          <option value="Book">Book</option>
+          <option value="Audiobook">Audiobook</option>
+          <option value="Podcast">Podcast</option>
+          <option value="Film">Film</option>
+          <option value="Series">Series</option>
         </Select>
       </Label>
       {errors.category && errors.category.type === 'required' && (

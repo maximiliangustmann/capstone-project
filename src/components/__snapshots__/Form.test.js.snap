@@ -33,27 +33,27 @@ exports[`Form renders correctly 1`] = `
       name="category"
     >
       <option
-        value="book"
+        value="Book"
       >
         Book
       </option>
       <option
-        value="audiobook"
+        value="Audiobook"
       >
         Audiobook
       </option>
       <option
-        value="podcast"
+        value="Podcast"
       >
         Podcast
       </option>
       <option
-        value="film"
+        value="Film"
       >
         Film
       </option>
       <option
-        value="series"
+        value="Series"
       >
         Series
       </option>

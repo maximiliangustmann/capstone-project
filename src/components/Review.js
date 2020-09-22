@@ -24,7 +24,7 @@ export default function Review({
       </EditButton>
       <Title>{title}</Title>
       <Tags>
-        <Tag>{category}</Tag>
+        <Tag data-cy="category">{category}</Tag>
         <Tag>{subcategory}</Tag>
         <Tag>{rating}</Tag>
       </Tags>
