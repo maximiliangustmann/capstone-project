@@ -11,7 +11,7 @@ export default function Reviews({ reviews, onRemove, onEdit }) {
       {reviews
         ?.filter(
           (reviews) =>
-            active === 'Show all' || !reviews.category.includes(active)
+            active === 'Show all' || reviews.category.includes(active)
         )
         .map((review) => (
           <Review
