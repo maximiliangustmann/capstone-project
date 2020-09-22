@@ -64,10 +64,13 @@ export default function Form({
 
       <Label>
         Category
-        <Input
-          name="category"
-          ref={register({ required: true, pattern: /.*\S.*/ })}
-        />
+        <Select name="category" ref={register({ required: true })}>
+          <option value="book">Book</option>
+          <option value="audiobook">Audiobook</option>
+          <option value="podcast">Podcast</option>
+          <option value="film">Film</option>
+          <option value="series">Series</option>
+        </Select>
       </Label>
       {errors.category && errors.category.type === 'required' && (
         <ErrorMessage>Category is required!</ErrorMessage>
@@ -131,6 +134,15 @@ const StyledForm = styled.form`
 `
 
 const Input = styled.input`
+  background-color: var(--main-white);
+  color: var(--main-black);
+  font-size: 16px;
+  font-weight: 300;
+  width: 100%;
+  margin: 0;
+`
+
+const Select = styled.select`
   background-color: var(--main-white);
   color: var(--main-black);
   font-size: 16px;
