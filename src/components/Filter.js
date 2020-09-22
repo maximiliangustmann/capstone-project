@@ -10,7 +10,7 @@ export default function Filter({ filters, active, setActive }) {
           active={active === filter}
           onClick={() => activeFilter(filter)}
         >
-          {filter.includes('all') ? filter : filter}
+          {filter}
         </FilterButton>
       ))}
     </ButtonWrapper>
