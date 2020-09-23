@@ -21,7 +21,12 @@ export default function App() {
   return (
     <Switch>
       <Route exact path="/">
-        <Dashboard reviews={reviews} onRemove={removeReview} onEdit={onEdit} />
+        <Dashboard
+          reviews={reviews}
+          onRemove={removeReview}
+          onEdit={onEdit}
+          activeFilter={activeFilter}
+        />
       </Route>
       <Route path="/create">
         <Form

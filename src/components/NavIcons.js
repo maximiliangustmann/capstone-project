@@ -5,15 +5,42 @@ import { ReactComponent as Audiobook } from '../img/audiobook.svg'
 import { ReactComponent as Podcast } from '../img/podcast.svg'
 import { ReactComponent as Film } from '../img/film.svg'
 import { ReactComponent as Series } from '../img/series.svg'
+import { useHistory } from 'react-router-dom'
 
-export default function NavIcons() {
+export default function NavIcons({ activeFilter }) {
+  const history = useHistory()
   return (
     <IconWrapper>
-      <BookIcon />
-      <AudiobookIcon />
-      <PodcastIcon />
-      <FilmIcon />
-      <SeriesIcon />
+      <BookIcon
+        onClick={() => {
+          history.push('/reviews')
+          activeFilter('Book')
+        }}
+      />
+      <AudiobookIcon
+        onClick={() => {
+          history.push('/reviews')
+          activeFilter('Audiobook')
+        }}
+      />
+      <PodcastIcon
+        onClick={() => {
+          history.push('/reviews')
+          activeFilter('Podcast')
+        }}
+      />
+      <FilmIcon
+        onClick={() => {
+          history.push('/reviews')
+          activeFilter('Film')
+        }}
+      />
+      <SeriesIcon
+        onClick={() => {
+          history.push('/reviews')
+          activeFilter('Series')
+        }}
+      />
     </IconWrapper>
   )
 }
