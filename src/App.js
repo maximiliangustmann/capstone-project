@@ -4,6 +4,7 @@ import Form from './components/Form'
 import Dashboard from './pages/Dashboard'
 import useReviews from './hooks/useReviews'
 import Reviews from './pages/Reviews'
+import useFilters from './hooks/useFilters'
 
 export default function App() {
   const {
@@ -15,6 +16,7 @@ export default function App() {
     editReview,
     onEdit,
   } = useReviews()
+  const { filters, active, setActive, activeFilter } = useFilters()
 
   return (
     <Switch>
@@ -30,7 +32,15 @@ export default function App() {
         />
       </Route>
       <Route path="/reviews">
-        <Reviews reviews={reviews} onRemove={removeReview} onEdit={onEdit} />
+        <Reviews
+          reviews={reviews}
+          onRemove={removeReview}
+          onEdit={onEdit}
+          active={active}
+          setActive={setActive}
+          filters={filters}
+          activeFilter={activeFilter}
+        />
       </Route>
     </Switch>
   )

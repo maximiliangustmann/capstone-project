@@ -1,13 +1,24 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Filter from '../components/Filter'
 import Review from '../components/Review'
 
-export default function Reviews({ reviews, onRemove, onEdit }) {
-  const filters = ['Show all', 'Book', 'Audiobook', 'Podcast', 'Film', 'Series']
-  const [active, setActive] = useState(filters[0])
+export default function Reviews({
+  reviews,
+  onRemove,
+  onEdit,
+  filters,
+  active,
+  setActive,
+  activeFilter,
+}) {
   return (
     <>
-      <Filter filters={filters} active={active} setActive={setActive} />
+      <Filter
+        filters={filters}
+        active={active}
+        setActive={setActive}
+        activeFilter={activeFilter}
+      />
       {reviews
         ?.filter(
           (reviews) =>
