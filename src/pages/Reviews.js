@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import Filter from './Filter'
-import Review from './Review'
+import Filter from '../components/Filter'
+import Review from '../components/Review'
 
 export default function Reviews({ reviews, onRemove, onEdit }) {
   const filters = ['Show all', 'Book', 'Audiobook', 'Podcast', 'Film', 'Series']
