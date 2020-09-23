@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom'
 import Form from './components/Form'
 import Dashboard from './pages/Dashboard'
 import useReviews from './hooks/useReviews'
+import Reviews from './pages/Reviews'
 
 export default function App() {
   const {
@@ -27,6 +28,9 @@ export default function App() {
           editReviewState={editReviewState}
           setEditReviewState={setEditReviewState}
         />
+      </Route>
+      <Route path="/reviews">
+        <Reviews reviews={reviews} onRemove={removeReview} onEdit={onEdit} />
       </Route>
     </Switch>
   )
