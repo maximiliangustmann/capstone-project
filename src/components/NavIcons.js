@@ -20,44 +20,45 @@ export default function NavIcons() {
 
 const IconWrapper = styled.div`
   display: grid;
-  grid-template-columns: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
+  grid-template-columns: 0.15fr 0.15fr 0.15fr 0.15fr 0.15fr;
   grid-template-rows: 1fr 1fr 1fr;
-  row-gap: 20%;
+  row-gap: 30%;
   fill: var(--main-red);
   justify-content: center;
+  margin-top: 100px;
 `
 
 const BookIcon = styled(Book)`
-  height: 80%;
-  width: 80%;
+  height: 100%;
+  width: 100%;
   grid-column: 3;
   grid-row: 1;
 `
 
 const AudiobookIcon = styled(Audiobook)`
-  height: 80%;
-  width: 80%;
+  height: 100%;
+  width: 100%%;
   grid-column: 1;
   grid-row: 2;
 `
 
 const PodcastIcon = styled(Podcast)`
-  height: 80%;
-  width: 80%;
+  height: 100%;
+  width: 100%;
   grid-column: 5;
   grid-row: 2;
 `
 
 const FilmIcon = styled(Film)`
-  height: 80%;
-  width: 80%;
+  height: 100%;
+  width: 100%;
   grid-column: 2;
   grid-row: 3;
 `
 
 const SeriesIcon = styled(Series)`
-  height: 80%;
-  width: 80%;
+  height: 100%;
+  width: 100%;
   grid-column: 4;
   grid-row: 3;
 `
