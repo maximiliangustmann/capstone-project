@@ -5,7 +5,7 @@ import { ReactComponent as Home } from '../img/home.svg'
 
 export default function HomeButton() {
   return (
-    <StyledNavLink exakt to="/">
+    <StyledNavLink exakt to="/" data-cy="homebutton">
       <HomeIcon />
     </StyledNavLink>
   )

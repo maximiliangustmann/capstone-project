@@ -12,30 +12,35 @@ export default function NavIcons({ activeFilter }) {
   return (
     <IconWrapper>
       <BookIcon
+        data-cy="bookicon"
         onClick={() => {
           history.push('/reviews')
           activeFilter('Book')
         }}
       />
       <AudiobookIcon
+        data-cy="audiobookicon"
         onClick={() => {
           history.push('/reviews')
           activeFilter('Audiobook')
         }}
       />
       <PodcastIcon
+        data-cy="podcasticon"
         onClick={() => {
           history.push('/reviews')
           activeFilter('Podcast')
         }}
       />
       <FilmIcon
+        data-cy="filmicon"
         onClick={() => {
           history.push('/reviews')
           activeFilter('Film')
         }}
       />
       <SeriesIcon
+        data-cy="seriesicon"
         onClick={() => {
           history.push('/reviews')
           activeFilter('Series')

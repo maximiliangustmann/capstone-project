@@ -25,6 +25,8 @@ context('Delete review', () => {
 
     cy.get('button').contains('Submit').click()
 
+    cy.visit('reviews')
+
     cy.get('[data-cy=delete]').click()
 
     cy.contains('TestTitle').should('not.exist')
