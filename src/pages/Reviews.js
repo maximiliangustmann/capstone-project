@@ -1,5 +1,6 @@
 import React from 'react'
 import Filter from '../components/Filter'
+import HomeButton from '../components/HomeButton'
 import Review from '../components/Review'
 
 export default function Reviews({
@@ -13,6 +14,7 @@ export default function Reviews({
 }) {
   return (
     <>
+      <HomeButton />
       <Filter
         filters={filters}
         active={active}
