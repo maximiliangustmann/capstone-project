@@ -1,12 +1,12 @@
 import React from 'react'
-import Reviews from '../components/Reviews'
 import CreateButton from '../components/CreateButton'
+import NavIcons from '../components/NavIcons'
 
-export default function Dashboard({ reviews, onRemove, onEdit }) {
+export default function Dashboard({ activeFilter }) {
   return (
     <>
       <CreateButton />
-      <Reviews reviews={reviews} onRemove={onRemove} onEdit={onEdit} />
+      <NavIcons activeFilter={activeFilter} />
     </>
   )
 }

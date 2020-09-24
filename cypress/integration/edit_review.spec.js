@@ -25,6 +25,8 @@ context('Edit review', () => {
 
     cy.get('button').contains('Submit').click()
 
+    cy.visit('/reviews')
+
     cy.get('h2').contains('TestTitle')
 
     cy.get('[data-cy=edit]').click()

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 
-export default function Filter({ filters, active, setActive }) {
+export default function Filter({ filters, active, activeFilter }) {
   return (
     <ButtonWrapper>
       {filters.map((filter) => (
@@ -15,10 +15,6 @@ export default function Filter({ filters, active, setActive }) {
       ))}
     </ButtonWrapper>
   )
-
-  function activeFilter(filter) {
-    setActive(filter)
-  }
 }
 
 const ButtonWrapper = styled.section`

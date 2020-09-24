@@ -3,7 +3,7 @@
 exports[`CreateButton renders correctly 1`] = `
 <a
   aria-current={null}
-  className="CreateButton__StyledNavLink-sc-4mhuep-0 ihrlzj"
+  className="CreateButton__StyledNavLink-sc-4mhuep-0 hdCCGM"
   data-cy="create"
   href="/create"
   onClick={[Function]}

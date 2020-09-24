@@ -25,7 +25,11 @@ context('Create review', () => {
 
     cy.get('button').contains('Submit').click()
 
+    cy.visit('/reviews')
+
     cy.get('h2').contains('TestTitle')
+
+    cy.visit('/')
 
     cy.get('[data-cy=create]').click()
 
@@ -83,7 +87,7 @@ context('Create review', () => {
 
     cy.get('button').contains('Submit').click()
 
-    cy.visit('http://localhost:3000/')
+    cy.visit('/reviews')
 
     cy.get('h2').contains('TestTitle')
   })
