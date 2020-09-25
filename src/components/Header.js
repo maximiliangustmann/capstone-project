@@ -34,4 +34,5 @@ const AddIcon = styled(Add)`
 const HeaderWrapper = styled.div`
   display: flex;
   justify-content: center;
+  margin-top: 20px;
 `

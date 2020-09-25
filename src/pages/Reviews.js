@@ -2,6 +2,7 @@ import React from 'react'
 import Filter from '../components/Filter'
 import Review from '../components/Review'
 import Header from '../components/Header'
+import styled from 'styled-components/macro'
 
 export default function Reviews({
   reviews,
@@ -15,20 +16,21 @@ export default function Reviews({
   return (
     <>
       <Header />
-
-      {reviews
-        ?.filter(
-          (reviews) =>
-            active === 'Show all' || reviews.category.includes(active)
-        )
-        .map((review) => (
-          <Review
-            key={review.id}
-            {...review}
-            onRemove={onRemove}
-            onEdit={onEdit}
-          />
-        ))}
+      <StyledReviews>
+        {reviews
+          ?.filter(
+            (reviews) =>
+              active === 'Show all' || reviews.category.includes(active)
+          )
+          .map((review) => (
+            <Review
+              key={review.id}
+              {...review}
+              onRemove={onRemove}
+              onEdit={onEdit}
+            />
+          ))}
+      </StyledReviews>
 
       <Filter
         filters={filters}
@@ -39,3 +41,8 @@ export default function Reviews({
     </>
   )
 }
+
+const StyledReviews = styled.div`
+  display: grid;
+  gap: 20px;
+`
