@@ -18,7 +18,6 @@ export default function Filter({ filters, active, activeFilter }) {
 }
 
 const FilterBar = styled.div`
-  grid-row: 3;
   display: flex;
   flex-wrap: wrap;
   margin: 20px;

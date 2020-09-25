@@ -21,5 +21,4 @@ const HomeIcon = styled(Home)`
 const StyledNavLink = styled(NavLink)`
   display: flex;
   justify-content: center;
-  grid-row: 1;
 `

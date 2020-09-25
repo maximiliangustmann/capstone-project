@@ -14,38 +14,29 @@ export default function Reviews({
   activeFilter,
 }) {
   return (
-    <PageLayout>
+    <>
       <HomeButton />
-      <ReviewWrapper>
-        {reviews
-          ?.filter(
-            (reviews) =>
-              active === 'Show all' || reviews.category.includes(active)
-          )
-          .map((review) => (
-            <Review
-              key={review.id}
-              {...review}
-              onRemove={onRemove}
-              onEdit={onEdit}
-            />
-          ))}
-      </ReviewWrapper>
+
+      {reviews
+        ?.filter(
+          (reviews) =>
+            active === 'Show all' || reviews.category.includes(active)
+        )
+        .map((review) => (
+          <Review
+            key={review.id}
+            {...review}
+            onRemove={onRemove}
+            onEdit={onEdit}
+          />
+        ))}
+
       <Filter
         filters={filters}
         active={active}
         setActive={setActive}
         activeFilter={activeFilter}
       />
-    </PageLayout>
+    </>
   )
 }
-
-const PageLayout = styled.div`
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-`
-
-const ReviewWrapper = styled.div`
-  grid-row: 2;
-`
