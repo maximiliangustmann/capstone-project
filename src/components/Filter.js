@@ -3,7 +3,7 @@ import styled from 'styled-components/macro'
 
 export default function Filter({ filters, active, activeFilter }) {
   return (
-    <FilterBar>
+    <FilterBar data-cy="filterbar">
       {filters.map((filter) => (
         <FilterButton
           key={filter}
