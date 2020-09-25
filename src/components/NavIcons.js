@@ -11,41 +11,60 @@ export default function NavIcons({ activeFilter }) {
   const history = useHistory()
   return (
     <IconWrapper>
-      <BookIcon
-        data-cy="bookicon"
-        onClick={() => {
-          history.push('/reviews')
-          activeFilter('Book')
-        }}
-      />
-      <AudiobookIcon
-        data-cy="audiobookicon"
-        onClick={() => {
-          history.push('/reviews')
-          activeFilter('Audiobook')
-        }}
-      />
-      <PodcastIcon
-        data-cy="podcasticon"
-        onClick={() => {
-          history.push('/reviews')
-          activeFilter('Podcast')
-        }}
-      />
-      <FilmIcon
-        data-cy="filmicon"
-        onClick={() => {
-          history.push('/reviews')
-          activeFilter('Film')
-        }}
-      />
-      <SeriesIcon
-        data-cy="seriesicon"
-        onClick={() => {
-          history.push('/reviews')
-          activeFilter('Series')
-        }}
-      />
+      <BookIconWrapper>
+        <BookIcon
+          data-cy="bookicon"
+          onClick={() => {
+            history.push('/reviews')
+            activeFilter('Book')
+          }}
+        />
+        <p>Books</p>
+      </BookIconWrapper>
+
+      <AudiobookIconWrapper>
+        <AudiobookIcon
+          data-cy="audiobookicon"
+          onClick={() => {
+            history.push('/reviews')
+            activeFilter('Audiobook')
+          }}
+        />
+        <p>Audiobooks</p>
+      </AudiobookIconWrapper>
+
+      <PodcastIconWrapper>
+        <PodcastIcon
+          data-cy="podcasticon"
+          onClick={() => {
+            history.push('/reviews')
+            activeFilter('Podcast')
+          }}
+        />
+        <p>Podcasts</p>
+      </PodcastIconWrapper>
+
+      <FilmIconWrapper>
+        <FilmIcon
+          data-cy="filmicon"
+          onClick={() => {
+            history.push('/reviews')
+            activeFilter('Film')
+          }}
+        />
+        <p>Films</p>
+      </FilmIconWrapper>
+
+      <SeriesIconWrapper>
+        <SeriesIcon
+          data-cy="seriesicon"
+          onClick={() => {
+            history.push('/reviews')
+            activeFilter('Series')
+          }}
+        />
+        <p>Series</p>
+      </SeriesIconWrapper>
     </IconWrapper>
   )
 }
@@ -54,43 +73,76 @@ const IconWrapper = styled.div`
   display: grid;
   grid-template-columns: 0.15fr 0.15fr 0.15fr 0.15fr 0.15fr;
   grid-template-rows: 1fr 1fr 1fr;
-  row-gap: 30%;
+  row-gap: 20%;
   fill: var(--main-red);
   justify-content: center;
   margin-top: 100px;
+  color: var(--main-white);
+  font-size: 18px;
+  font-weight: 500;
+`
+
+const BookIconWrapper = styled.div`
+  grid-column: 3;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 const BookIcon = styled(Book)`
-  height: 100%;
-  width: 100%;
-  grid-column: 3;
-  grid-row: 1;
+  height: 40px;
+  width: 40px;
+`
+
+const AudiobookIconWrapper = styled.div`
+  grid-column: 1;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 const AudiobookIcon = styled(Audiobook)`
-  height: 100%;
-  width: 100%%;
-  grid-column: 1;
+  height: 40px;
+  width: 40px;
+`
+
+const PodcastIconWrapper = styled.div`
+  grid-column: 5;
   grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 const PodcastIcon = styled(Podcast)`
-  height: 100%;
-  width: 100%;
-  grid-column: 5;
-  grid-row: 2;
+  height: 40px;
+  width: 40px;
+`
+
+const FilmIconWrapper = styled.div`
+  grid-column: 2;
+  grid-row: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 const FilmIcon = styled(Film)`
-  height: 100%;
-  width: 100%;
-  grid-column: 2;
+  height: 40px;
+  width: 40px;
+`
+
+const SeriesIconWrapper = styled.div`
+  grid-column: 4;
   grid-row: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 const SeriesIcon = styled(Series)`
-  height: 100%;
-  width: 100%;
-  grid-column: 4;
-  grid-row: 3;
+  height: 40px;
+  width: 40px;
 `
