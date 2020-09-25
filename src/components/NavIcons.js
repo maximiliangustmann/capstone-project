@@ -73,10 +73,10 @@ const IconWrapper = styled.div`
   display: grid;
   grid-template-columns: 0.15fr 0.15fr 0.15fr 0.15fr 0.15fr;
   grid-template-rows: 1fr 1fr 1fr;
-  row-gap: 20%;
+  row-gap: 10%;
   fill: var(--main-red);
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 75px;
   color: var(--main-white);
   font-size: 18px;
   font-weight: 500;
