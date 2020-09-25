@@ -1,8 +1,7 @@
 import React from 'react'
 import Filter from '../components/Filter'
-import HomeButton from '../components/HomeButton'
 import Review from '../components/Review'
-import styled from 'styled-components/macro'
+import Header from '../components/Header'
 
 export default function Reviews({
   reviews,
@@ -15,7 +14,7 @@ export default function Reviews({
 }) {
   return (
     <>
-      <HomeButton />
+      <Header />
 
       {reviews
         ?.filter(
