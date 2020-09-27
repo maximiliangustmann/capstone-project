@@ -13,7 +13,7 @@ export default function NavIcons({ activeFilter }) {
     <IconWrapper>
       <BookIconWrapper>
         <BookIcon
-          data-cy="bookicon"
+          data-cy="book-icon"
           onClick={() => {
             history.push('/reviews')
             activeFilter('Book')
@@ -24,7 +24,7 @@ export default function NavIcons({ activeFilter }) {
 
       <AudiobookIconWrapper>
         <AudiobookIcon
-          data-cy="audiobookicon"
+          data-cy="audiobook-icon"
           onClick={() => {
             history.push('/reviews')
             activeFilter('Audiobook')
@@ -35,7 +35,7 @@ export default function NavIcons({ activeFilter }) {
 
       <PodcastIconWrapper>
         <PodcastIcon
-          data-cy="podcasticon"
+          data-cy="podcast-icon"
           onClick={() => {
             history.push('/reviews')
             activeFilter('Podcast')
@@ -46,7 +46,7 @@ export default function NavIcons({ activeFilter }) {
 
       <FilmIconWrapper>
         <FilmIcon
-          data-cy="filmicon"
+          data-cy="film-icon"
           onClick={() => {
             history.push('/reviews')
             activeFilter('Film')
@@ -57,7 +57,7 @@ export default function NavIcons({ activeFilter }) {
 
       <SeriesIconWrapper>
         <SeriesIcon
-          data-cy="seriesicon"
+          data-cy="series-icon"
           onClick={() => {
             history.push('/reviews')
             activeFilter('Series')
