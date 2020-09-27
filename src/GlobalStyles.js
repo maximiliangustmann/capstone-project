@@ -9,7 +9,7 @@ body {
     margin: 0;
     padding: 0;
     background: var(--gradient-black);
-    height: 100vh;
+    min-height: 100vh;
     
 }
 

@@ -2,7 +2,7 @@
 
 exports[`Review renders correctly 1`] = `
 <section
-  className="Review__StyledReview-ip4zvc-0 iaQwdY"
+  className="Review__StyledReview-ip4zvc-0 gWttUG"
 >
   <button
     className="Review__DeleteButton-ip4zvc-1 iVYRxG"

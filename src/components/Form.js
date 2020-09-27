@@ -17,11 +17,10 @@ export default function Form({
     if (editReviewState) {
       editReview({ ...newReview, id: editReviewState.id })
       setEditReviewState(undefined)
-      history.push('/')
     } else {
       onSubmit({ ...newReview, id: uuidv4() })
-      history.push('/')
     }
+    history.push('/reviews')
   }
 
   useEffect(() => {
