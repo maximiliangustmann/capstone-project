@@ -8,10 +8,10 @@ import SortButton from './SortButton'
 export default function Header() {
   return (
     <HeaderWrapper>
-      <NavLink exakt to="/" data-cy="homebutton">
+      <NavLink exact to="/" data-cy="homebutton">
         <HomeIcon />
       </NavLink>
-      <NavLink exakt to="/create" data-cy="addbutton">
+      <NavLink to="/create" data-cy="addbutton">
         <AddIcon />
       </NavLink>
       <SortButton />

@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { ReactComponent as Sort } from '../img/sort.svg'
 
 export default function SortButton() {
-  return <SortIcon />
+  const [showMenu, setShowMenu] = useState(false)
+  return (
+    <>
+      <SortIcon onClick={() => setShowMenu(!showMenu)} />
+      {showMenu && (
+        <div>
+          <button>Subcategory</button>
+          <button>Rating</button>
+        </div>
+      )}
+    </>
+  )
 }
 
 const SortIcon = styled(Sort)`
