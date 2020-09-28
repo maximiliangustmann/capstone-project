@@ -1,10 +1,14 @@
 import React from 'react'
+import styled from 'styled-components'
+import { ReactComponent as Sort } from '../img/sort.svg'
 
 export default function SortButton() {
-  return (
-    <select>
-      <option value="subcategory">Subcategory</option>
-      <option value="rating">Rating</option>
-    </select>
-  )
+  return <SortIcon />
 }
+
+const SortIcon = styled(Sort)`
+  fill: var(--main-red);
+  height: 40px;
+  width: 40px;
+  margin: 20px;
+`
