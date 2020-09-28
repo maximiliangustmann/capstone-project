@@ -2,15 +2,16 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { ReactComponent as Sort } from '../img/sort.svg'
 
-export default function SortButton() {
+export default function SortButton({ sortBySubcategory, sortByRating }) {
   const [showMenu, setShowMenu] = useState(false)
+
   return (
     <SortButtonWrapper>
       <SortIcon onClick={() => setShowMenu(!showMenu)} />
       {showMenu && (
         <ButtonWrapper>
-          <Button>Subcategory</Button>
-          <Button>Rating</Button>
+          <Button onClick={() => sortBySubcategory()}>Subcategory</Button>
+          <Button onClick={() => sortByRating()}>Rating</Button>
         </ButtonWrapper>
       )}
     </SortButtonWrapper>

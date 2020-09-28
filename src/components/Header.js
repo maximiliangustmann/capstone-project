@@ -5,7 +5,7 @@ import { ReactComponent as Home } from '../img/home.svg'
 import { ReactComponent as Add } from '../img/add.svg'
 import SortButton from './SortButton'
 
-export default function Header() {
+export default function Header({ sortBySubcategory, sortByRating }) {
   return (
     <HeaderWrapper>
       <NavLink exact to="/" data-cy="homebutton">
@@ -14,7 +14,10 @@ export default function Header() {
       <NavLink to="/create" data-cy="addbutton">
         <AddIcon />
       </NavLink>
-      <SortButton />
+      <SortButton
+        sortBySubcategory={sortBySubcategory}
+        sortByRating={sortByRating}
+      />
     </HeaderWrapper>
   )
 }

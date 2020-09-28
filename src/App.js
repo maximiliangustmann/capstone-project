@@ -15,6 +15,8 @@ export default function App() {
     removeReview,
     editReview,
     onEdit,
+    sortBySubcategory,
+    sortByRating,
   } = useReviews()
   const { filters, active, setActive, activeFilter } = useFilters()
 
@@ -45,6 +47,8 @@ export default function App() {
           setActive={setActive}
           filters={filters}
           activeFilter={activeFilter}
+          sortBySubcategory={sortBySubcategory}
+          sortByRating={sortByRating}
         />
       </Route>
     </Switch>

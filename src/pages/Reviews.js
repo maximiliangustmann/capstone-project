@@ -12,10 +12,15 @@ export default function Reviews({
   active,
   setActive,
   activeFilter,
+  sortBySubcategory,
+  sortByRating,
 }) {
   return (
     <>
-      <Header />
+      <Header
+        sortBySubcategory={sortBySubcategory}
+        sortByRating={sortByRating}
+      />
       <StyledReviews>
         {reviews
           ?.filter(

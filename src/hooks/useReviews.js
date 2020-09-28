@@ -37,6 +37,14 @@ export default function useReviews() {
     history.push('/create')
   }
 
+  function sortBySubcategory() {
+    setReviews([...reviews.sort((a, b) => b.subcategory < a.subcategory)])
+  }
+
+  function sortByRating() {
+    setReviews([...reviews.sort((a, b) => b.rating - a.rating)])
+  }
+
   return {
     reviews,
     editReviewState,
@@ -45,5 +53,7 @@ export default function useReviews() {
     removeReview,
     editReview,
     onEdit,
+    sortBySubcategory,
+    sortByRating,
   }
 }
