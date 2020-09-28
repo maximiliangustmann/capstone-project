@@ -12,7 +12,7 @@ export default function Header({ sortBySubcategory, sortByRating }) {
         <HomeIcon />
       </NavLink>
       <NavLink to="/create" data-cy="addbutton">
-        <AddIcon />
+        <AddIcon data-cy="add-icon" />
       </NavLink>
       <SortButton
         sortBySubcategory={sortBySubcategory}

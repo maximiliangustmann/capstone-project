@@ -92,11 +92,9 @@ exports[`Form renders correctly 1`] = `
     className="Form__ButtonGroup-fle9al-5 illQde"
   >
     <a
-      aria-current="page"
-      className="active"
-      href="/"
+      aria-current={null}
+      href="/reviews"
       onClick={[Function]}
-      style={Object {}}
     >
       <button
         className="Form__ButtonReset-fle9al-7 chVlNf"
