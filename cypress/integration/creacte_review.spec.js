@@ -59,7 +59,7 @@ context('Create review', () => {
 
     cy.get('button').contains('Cancel').click()
 
-    cy.get('[data-cy=create]').click()
+    cy.get('[data-cy=add-icon]').click()
 
     cy.get('label')
       .contains('Title')

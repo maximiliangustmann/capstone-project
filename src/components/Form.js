@@ -111,7 +111,7 @@ export default function Form({
       )}
 
       <ButtonGroup>
-        <NavLink exact to="/">
+        <NavLink to="/reviews">
           <ButtonReset
             type="reset"
             onClick={() => setEditReviewState(undefined)}

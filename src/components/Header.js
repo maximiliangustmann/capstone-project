@@ -3,16 +3,21 @@ import { NavLink } from 'react-router-dom'
 import styled from 'styled-components/macro'
 import { ReactComponent as Home } from '../img/home.svg'
 import { ReactComponent as Add } from '../img/add.svg'
+import SortButton from './SortButton'
 
-export default function Header() {
+export default function Header({ sortBySubcategory, sortByRating }) {
   return (
     <HeaderWrapper>
-      <NavLink exakt to="/" data-cy="homebutton">
+      <NavLink exact to="/" data-cy="homebutton">
         <HomeIcon />
       </NavLink>
-      <NavLink exakt to="/create" data-cy="addbutton">
-        <AddIcon />
+      <NavLink to="/create" data-cy="addbutton">
+        <AddIcon data-cy="add-icon" />
       </NavLink>
+      <SortButton
+        sortBySubcategory={sortBySubcategory}
+        sortByRating={sortByRating}
+      />
     </HeaderWrapper>
   )
 }
