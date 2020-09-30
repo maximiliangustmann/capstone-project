@@ -7,11 +7,18 @@ export default function SortButton({ sortBySubcategory, sortByRating }) {
 
   return (
     <SortButtonWrapper>
-      <SortIcon onClick={() => setShowMenu(!showMenu)} />
+      <SortIcon onClick={() => setShowMenu(!showMenu)} data-cy="sort-icon" />
       {showMenu && (
         <ButtonWrapper>
-          <Button onClick={() => sortBySubcategory()}>Subcategory</Button>
-          <Button onClick={() => sortByRating()}>Rating</Button>
+          <Button
+            onClick={() => sortBySubcategory()}
+            data-cy="sort-subcategory"
+          >
+            Subcategory
+          </Button>
+          <Button onClick={() => sortByRating()} data-cy="sort-rating">
+            Rating
+          </Button>
         </ButtonWrapper>
       )}
     </SortButtonWrapper>
