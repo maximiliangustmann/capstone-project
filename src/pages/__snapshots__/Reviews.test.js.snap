@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Reviews renders correctly 1`] = `
+Array [
+  <div
+    className="Header__HeaderWrapper-sc-1uw4t5o-2 bYSPhJ"
+  >
+    <a
+      aria-current="page"
+      className="active"
+      data-cy="homebutton"
+      href="/"
+      onClick={[Function]}
+      style={Object {}}
+    >
+      <svg
+        className="Header__HomeIcon-sc-1uw4t5o-0 jgwhff"
+      >
+        home.svg
+      </svg>
+    </a>
+    <a
+      aria-current={null}
+      data-cy="addbutton"
+      href="/create"
+      onClick={[Function]}
+    >
+      <svg
+        className="Header__AddIcon-sc-1uw4t5o-1 RFjBk"
+        data-cy="add-icon"
+      >
+        add.svg
+      </svg>
+    </a>
+    <div
+      className="sc-AxirZ hlnYRa"
+    >
+      <svg
+        className="sc-AxjAm fZvzJc"
+        data-cy="sort-icon"
+        onClick={[Function]}
+      >
+        sort.svg
+      </svg>
+    </div>
+  </div>,
+  <div
+    className="Reviews__StyledReviews-sc-1ki3ws2-0 eMhJGt"
+  />,
+  <div
+    className="Filter__FilterBar-sc-1lxxwpc-0 eklqMS"
+    data-cy="filterbar"
+  >
+    <button
+      className="Filter__FilterButton-sc-1lxxwpc-1 iukrbX"
+      onClick={[Function]}
+    >
+      Show all
+    </button>
+    <button
+      className="Filter__FilterButton-sc-1lxxwpc-1 iukrbX"
+      onClick={[Function]}
+    >
+      Book
+    </button>
+    <button
+      className="Filter__FilterButton-sc-1lxxwpc-1 iukrbX"
+      onClick={[Function]}
+    >
+      Audiobook
+    </button>
+    <button
+      className="Filter__FilterButton-sc-1lxxwpc-1 iukrbX"
+      onClick={[Function]}
+    >
+      Podcast
+    </button>
+    <button
+      className="Filter__FilterButton-sc-1lxxwpc-1 iukrbX"
+      onClick={[Function]}
+    >
+      Film
+    </button>
+    <button
+      className="Filter__FilterButton-sc-1lxxwpc-1 iukrbX"
+      onClick={[Function]}
+    >
+      Series
+    </button>
+  </div>,
+]
+`;
