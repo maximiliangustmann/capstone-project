@@ -16,10 +16,20 @@ export default function Review({
 }) {
   return (
     <StyledReview>
-      <DeleteButton data-cy="delete" type="button" onClick={() => onRemove(id)}>
+      <DeleteButton
+        data-cy="delete"
+        data-testid="delete"
+        type="button"
+        onClick={() => onRemove(id)}
+      >
         <DeleteIcon />
       </DeleteButton>
-      <EditButton data-cy="edit" type="button" onClick={() => onEdit(id)}>
+      <EditButton
+        data-cy="edit"
+        data-testid="edit"
+        type="button"
+        onClick={() => onEdit(id)}
+      >
         <EditIcon />
       </EditButton>
       <Title>{title}</Title>

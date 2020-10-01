@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<div
+  className="Header__HeaderWrapper-sc-1uw4t5o-2 bYSPhJ"
+>
+  <a
+    aria-current="page"
+    className="active"
+    data-cy="homebutton"
+    href="/"
+    onClick={[Function]}
+    style={Object {}}
+  >
+    <svg
+      className="Header__HomeIcon-sc-1uw4t5o-0 jgwhff"
+    >
+      home.svg
+    </svg>
+  </a>
+  <a
+    aria-current={null}
+    data-cy="addbutton"
+    href="/create"
+    onClick={[Function]}
+  >
+    <svg
+      className="Header__AddIcon-sc-1uw4t5o-1 RFjBk"
+      data-cy="add-icon"
+    >
+      add.svg
+    </svg>
+  </a>
+  <div
+    className="sc-AxirZ hlnYRa"
+  >
+    <svg
+      className="sc-AxjAm fZvzJc"
+      data-cy="sort-icon"
+      onClick={[Function]}
+    >
+      sort.svg
+    </svg>
+  </div>
+</div>
+`;

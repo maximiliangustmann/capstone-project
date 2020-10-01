@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SortButton renders correctly 1`] = `
+<div
+  className="sc-AxirZ hlnYRa"
+>
+  <svg
+    className="sc-AxjAm fZvzJc"
+    data-cy="sort-icon"
+    onClick={[Function]}
+  >
+    sort.svg
+  </svg>
+</div>
+`;

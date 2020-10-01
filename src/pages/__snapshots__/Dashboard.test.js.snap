@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dashboard renders correctly 1`] = `
+Array [
+  <a
+    aria-current={null}
+    className="CreateButton__StyledNavLink-sc-4mhuep-0 bkCsaS"
+    data-cy="create"
+    href="/create"
+    onClick={[Function]}
+  >
+    Create new review
+  </a>,
+  <div
+    className="NavIcons__IconWrapper-sc-16s2ff9-0 gzgJGk"
+  >
+    <div
+      className="NavIcons__BookIconWrapper-sc-16s2ff9-1 grYUZe"
+    >
+      <svg
+        className="NavIcons__BookIcon-sc-16s2ff9-2 jrxLuF"
+        data-cy="book-icon"
+        onClick={[Function]}
+      >
+        book.svg
+      </svg>
+      <p>
+        Books
+      </p>
+    </div>
+    <div
+      className="NavIcons__AudiobookIconWrapper-sc-16s2ff9-3 ezxPVz"
+    >
+      <svg
+        className="NavIcons__AudiobookIcon-sc-16s2ff9-4 hccpMh"
+        data-cy="audiobook-icon"
+        onClick={[Function]}
+      >
+        audiobook.svg
+      </svg>
+      <p>
+        Audiobooks
+      </p>
+    </div>
+    <div
+      className="NavIcons__PodcastIconWrapper-sc-16s2ff9-5 kWoZHs"
+    >
+      <svg
+        className="NavIcons__PodcastIcon-sc-16s2ff9-6 bGZwLi"
+        data-cy="podcast-icon"
+        onClick={[Function]}
+      >
+        podcast.svg
+      </svg>
+      <p>
+        Podcasts
+      </p>
+    </div>
+    <div
+      className="NavIcons__FilmIconWrapper-sc-16s2ff9-7 fTptlw"
+    >
+      <svg
+        className="NavIcons__FilmIcon-sc-16s2ff9-8 ebRclw"
+        data-cy="film-icon"
+        onClick={[Function]}
+      >
+        film.svg
+      </svg>
+      <p>
+        Films
+      </p>
+    </div>
+    <div
+      className="NavIcons__SeriesIconWrapper-sc-16s2ff9-9 eqLxXB"
+    >
+      <svg
+        className="NavIcons__SeriesIcon-sc-16s2ff9-10 eswIuU"
+        data-cy="series-icon"
+        onClick={[Function]}
+      >
+        series.svg
+      </svg>
+      <p>
+        Series
+      </p>
+    </div>
+  </div>,
+]
+`;

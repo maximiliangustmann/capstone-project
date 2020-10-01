@@ -7,6 +7,7 @@ exports[`Review renders correctly 1`] = `
   <button
     className="Review__DeleteButton-ip4zvc-1 iVYRxG"
     data-cy="delete"
+    data-testid="delete"
     onClick={[Function]}
     type="button"
   >
@@ -19,6 +20,7 @@ exports[`Review renders correctly 1`] = `
   <button
     className="Review__EditButton-ip4zvc-2 gGTXNT"
     data-cy="edit"
+    data-testid="edit"
     onClick={[Function]}
     type="button"
   >
