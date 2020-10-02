@@ -3,7 +3,7 @@ import styled from 'styled-components/macro'
 import PropTypes from 'prop-types'
 
 Filter.propTypes = {
-  filters: PropTypes.array.isRequired,
+  filters: PropTypes.arrayOf(PropTypes.string).isRequired,
   active: PropTypes.string,
   activeFilter: PropTypes.func,
 }

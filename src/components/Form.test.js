@@ -5,10 +5,11 @@ import { MemoryRouter } from 'react-router-dom'
 import { render } from '@testing-library/react'
 
 describe('Form', () => {
-  it('renders the form', () => {
+  const onSubmitMock = jest.fn()
+  const editReviewMOck = it('renders the form', () => {
     const { getByText } = render(
       <MemoryRouter>
-        <Form />
+        <Form onSubmit={onSubmitMock} />
       </MemoryRouter>
     )
     expect(getByText(/title/i)).toBeInTheDocument()
@@ -23,7 +24,7 @@ describe('Form', () => {
   it('renders correctly', () => {
     const tree = renderer.create(
       <MemoryRouter>
-        <Form />
+        <Form onSubmit={onSubmitMock} />
       </MemoryRouter>
     )
     expect(tree).toMatchSnapshot()

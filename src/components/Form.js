@@ -6,9 +6,9 @@ import { v4 as uuidv4 } from 'uuid'
 import PropTypes from 'prop-types'
 
 Form.propTypes = {
-  onSubmit: PropTypes.func,
+  onSubmit: PropTypes.func.isRequired,
   editReview: PropTypes.func,
-  editReviewState: PropTypes.bool,
+  editReviewState: PropTypes.object,
   setEditReviewState: PropTypes.func,
 }
 
