@@ -3,6 +3,14 @@ import styled from 'styled-components/macro'
 import { NavLink, useHistory } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import { v4 as uuidv4 } from 'uuid'
+import PropTypes from 'prop-types'
+
+Form.propTypes = {
+  onSubmit: PropTypes.func,
+  editReview: PropTypes.func,
+  editReviewState: PropTypes.bool,
+  setEditReviewState: PropTypes.func,
+}
 
 export default function Form({
   onSubmit,

@@ -2,6 +2,19 @@ import React from 'react'
 import styled from 'styled-components/macro'
 import { ReactComponent as Edit } from '../img/edit.svg'
 import { ReactComponent as Delete } from '../img/delete.svg'
+import PropTypes from 'prop-types'
+
+Review.propTypes = {
+  title: PropTypes.string,
+  rating: PropTypes.string,
+  category: PropTypes.string,
+  subcategory: PropTypes.string,
+  summary: PropTypes.string,
+  lessons: PropTypes.string,
+  onRemove: PropTypes.func,
+  onEdit: PropTypes.func,
+  id: PropTypes.string,
+}
 
 export default function Review({
   title,

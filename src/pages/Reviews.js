@@ -3,6 +3,19 @@ import Filter from '../components/Filter'
 import Review from '../components/Review'
 import Header from '../components/Header'
 import styled from 'styled-components/macro'
+import PropTypes from 'prop-types'
+
+Reviews.propTypes = {
+  reviews: PropTypes.array,
+  onRemove: PropTypes.func,
+  onEdit: PropTypes.func,
+  filters: PropTypes.array,
+  active: PropTypes.string,
+  setActive: PropTypes.func,
+  activeFilter: PropTypes.func,
+  sortBySubcategory: PropTypes.func,
+  sortByRating: PropTypes.func,
+}
 
 export default function Reviews({
   reviews,

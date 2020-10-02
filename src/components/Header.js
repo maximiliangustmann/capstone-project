@@ -4,6 +4,12 @@ import styled from 'styled-components/macro'
 import { ReactComponent as Home } from '../img/home.svg'
 import { ReactComponent as Add } from '../img/add.svg'
 import SortButton from './SortButton'
+import PropTypes from 'prop-types'
+
+Header.propTypes = {
+  sortBySubcategory: PropTypes.func,
+  sortByRating: PropTypes.func,
+}
 
 export default function Header({ sortBySubcategory, sortByRating }) {
   return (
