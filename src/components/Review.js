@@ -2,6 +2,19 @@ import React from 'react'
 import styled from 'styled-components/macro'
 import { ReactComponent as Edit } from '../img/edit.svg'
 import { ReactComponent as Delete } from '../img/delete.svg'
+import PropTypes from 'prop-types'
+
+Review.propTypes = {
+  title: PropTypes.string.isRequired,
+  rating: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  subcategory: PropTypes.string.isRequired,
+  summary: PropTypes.string.isRequired,
+  lessons: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  onRemove: PropTypes.func.isRequired,
+  onEdit: PropTypes.func.isRequired,
+}
 
 export default function Review({
   title,
@@ -10,9 +23,9 @@ export default function Review({
   subcategory,
   summary,
   lessons,
+  id,
   onRemove,
   onEdit,
-  id,
 }) {
   return (
     <StyledReview>

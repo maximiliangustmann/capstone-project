@@ -6,6 +6,11 @@ import { ReactComponent as Podcast } from '../img/podcast.svg'
 import { ReactComponent as Film } from '../img/film.svg'
 import { ReactComponent as Series } from '../img/series.svg'
 import { useHistory } from 'react-router-dom'
+import PropTypes from 'prop-types'
+
+NavIcons.propTypes = {
+  activeFilter: PropTypes.func,
+}
 
 export default function NavIcons({ activeFilter }) {
   const history = useHistory()

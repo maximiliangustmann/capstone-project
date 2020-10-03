@@ -1,6 +1,12 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { ReactComponent as Sort } from '../img/sort.svg'
+import PropTypes from 'prop-types'
+
+SortButton.propTypes = {
+  sortBySubcategory: PropTypes.func,
+  sortByRating: PropTypes.func,
+}
 
 export default function SortButton({ sortBySubcategory, sortByRating }) {
   const [showMenu, setShowMenu] = useState(false)
