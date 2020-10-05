@@ -19,9 +19,9 @@ const StyledNavLink = styled(NavLink)`
   border: none;
   background: var(--gradient-red);
   box-shadow: var(--shadow-red-30);
-  font-size: 22pt;
+  font-size: 1.375em;
   color: var(--main-white);
   font-weight: 900;
   padding: 20px;
-  margin: 75px 40px 20px;
+  margin: 20px 40px 20px;
 `

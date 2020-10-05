@@ -10,7 +10,7 @@ body {
     padding: 0;
     background: var(--gradient-black);
     min-height: 100vh;
-    
+    font-size: 112.5%;
 }
 
 

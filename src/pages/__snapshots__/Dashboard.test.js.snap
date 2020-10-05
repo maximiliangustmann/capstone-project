@@ -1,18 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dashboard renders correctly 1`] = `
-Array [
+<div
+  className="sc-AxjAm hmdRme"
+>
   <a
     aria-current={null}
-    className="CreateButton__StyledNavLink-sc-4mhuep-0 bkCsaS"
+    className="CreateButton__StyledNavLink-sc-4mhuep-0 cxMzA"
     data-cy="create"
     href="/create"
     onClick={[Function]}
   >
     Create new review
-  </a>,
+  </a>
   <div
-    className="NavIcons__IconWrapper-sc-16s2ff9-0 gzgJGk"
+    className="NavIcons__IconWrapper-sc-16s2ff9-0 kxMxGQ"
   >
     <div
       className="NavIcons__BookIconWrapper-sc-16s2ff9-1 grYUZe"
@@ -84,6 +86,6 @@ Array [
         Series
       </p>
     </div>
-  </div>,
-]
+  </div>
+</div>
 `;

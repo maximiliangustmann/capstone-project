@@ -63,4 +63,12 @@ export default function Reviews({
 const StyledReviews = styled.div`
   display: grid;
   gap: 20px;
+  @media (min-width: 750px) and (max-width: 1124px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (min-width: 1125px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 `

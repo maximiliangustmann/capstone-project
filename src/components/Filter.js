@@ -10,17 +10,19 @@ Filter.propTypes = {
 
 export default function Filter({ filters, active, activeFilter }) {
   return (
-    <FilterBar data-cy="filterbar">
-      {filters.map((filter) => (
-        <FilterButton
-          key={filter}
-          active={active === filter}
-          onClick={() => activeFilter(filter)}
-        >
-          {filter}
-        </FilterButton>
-      ))}
-    </FilterBar>
+    <FilterBarWrapper>
+      <FilterBar data-cy="filterbar">
+        {filters.map((filter) => (
+          <FilterButton
+            key={filter}
+            active={active === filter}
+            onClick={() => activeFilter(filter)}
+          >
+            {filter}
+          </FilterButton>
+        ))}
+      </FilterBar>
+    </FilterBarWrapper>
   )
 }
 
@@ -28,6 +30,7 @@ const FilterBar = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin: 20px;
+  padding: 5px;
   border-radius: 50px;
   justify-content: space-evenly;
   align-content: center;
@@ -46,5 +49,12 @@ const FilterButton = styled.button`
   margin: 10px 5px;
   color: var(--main-black);
   font-weight: 300;
-  font-size: 16px;
+  font-size: 1em;
+`
+
+const FilterBarWrapper = styled.div`
+  display: flex;
+  @media (min-width: 574px) {
+    justify-content: center;
+  }
 `

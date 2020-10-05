@@ -138,6 +138,12 @@ const StyledForm = styled.form`
   gap: 32px;
   align-content: start;
   margin: 40px 52px;
+  @media (min-height: 800px) (max-height: 999px) {
+    gap: 40px;
+  }
+  @media (min-height: 100px) {
+    gap: 50px;
+  }
 `
 
 const Input = styled.input`
@@ -147,35 +153,44 @@ const Input = styled.input`
   font-weight: 300;
   width: 100%;
   margin: 0;
+  @media (min-width: 800px) {
+    background-color: #ababab;
+  }
 `
 
 const Select = styled.select`
   background-color: var(--main-white);
   color: var(--main-black);
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 300;
   width: 100%;
   margin: 0;
+  @media (min-width: 800px) {
+    background-color: #ababab;
+  }
 `
 
 const Textarea = styled.textarea`
   background-color: var(--main-white);
   color: var(--main-black);
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 300;
   width: 100%;
   margin: 0;
+  @media (min-width: 800px) {
+    background-color: #ababab;
+  }
 `
 
 const Label = styled.label`
-  font-size: 18px;
+  font-size: 1.125em;
   font-weight: 700;
   color: var(--main-white);
 `
 
 const ButtonGroup = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 `
 
 const ErrorMessage = styled.p`
@@ -192,7 +207,7 @@ const ButtonReset = styled.button`
   border: none;
   border-radius: 50px;
   box-shadow: var(--shadow-red-30);
-  font-size: 22pt;
+  font-size: 1.375em;
   color: var(--main-white);
   font-weight: 500;
   padding: 9px 14px;
@@ -203,7 +218,7 @@ const ButtonSubmit = styled.button`
   border: none;
   border-radius: 50px;
   box-shadow: var(--shadow-green);
-  font-size: 22pt;
+  font-size: 1.375em;
   color: var(--main-white);
   font-weight: 500;
   padding: 9px 14px;
