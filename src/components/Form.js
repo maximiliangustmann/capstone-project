@@ -138,6 +138,12 @@ const StyledForm = styled.form`
   gap: 32px;
   align-content: start;
   margin: 40px 52px;
+  @media (min-height: 800px) (max-height: 999px) {
+    gap: 40px;
+  }
+  @media (min-height: 100px) {
+    gap: 50px;
+  }
 `
 
 const Input = styled.input`
@@ -147,6 +153,9 @@ const Input = styled.input`
   font-weight: 300;
   width: 100%;
   margin: 0;
+  @media (min-width: 800px) {
+    background-color: #ababab;
+  }
 `
 
 const Select = styled.select`
@@ -156,6 +165,9 @@ const Select = styled.select`
   font-weight: 300;
   width: 100%;
   margin: 0;
+  @media (min-width: 800px) {
+    background-color: #ababab;
+  }
 `
 
 const Textarea = styled.textarea`
@@ -165,6 +177,9 @@ const Textarea = styled.textarea`
   font-weight: 300;
   width: 100%;
   margin: 0;
+  @media (min-width: 800px) {
+    background-color: #ababab;
+  }
 `
 
 const Label = styled.label`
@@ -175,7 +190,7 @@ const Label = styled.label`
 
 const ButtonGroup = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 `
 
 const ErrorMessage = styled.p`

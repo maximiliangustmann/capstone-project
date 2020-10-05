@@ -30,6 +30,7 @@ const FilterBar = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin: 20px;
+  padding: 5px;
   border-radius: 50px;
   justify-content: space-evenly;
   align-content: center;
