@@ -54,5 +54,7 @@ const FilterButton = styled.button`
 
 const FilterBarWrapper = styled.div`
   display: flex;
-  justify-content: center;
+  @media (min-width: 574px) {
+    justify-content: center;
+  }
 `
