@@ -91,7 +91,7 @@ const EditButton = styled.button`
 
 const Title = styled.h2`
   font-weight: 700;
-  font-size: 24px;
+  font-size: 1.5em;
   text-align: center;
   margin-bottom: 10px;
 `
@@ -105,28 +105,28 @@ const Tag = styled.button`
   background: none;
   border: solid 1px #00001d;
   border-radius: 50px;
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 300;
   font-style: italic;
   padding: 5px;
 `
 
 const Summary = styled.h3`
-  font-size: 18px;
+  font-size: 1.125em;
   font-weight: 700;
   margin-top: 36px;
   margin-bottom: 20px;
 `
 
 const Lessons = styled.h3`
-  font-size: 18px;
+  font-size: 1.125em;
   font-weight: 700;
   margin-top: 30px;
   margin-bottom: 20px;
 `
 
 const ReviewText = styled.p`
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 300;
 `
 

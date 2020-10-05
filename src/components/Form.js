@@ -152,7 +152,7 @@ const Input = styled.input`
 const Select = styled.select`
   background-color: var(--main-white);
   color: var(--main-black);
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 300;
   width: 100%;
   margin: 0;
@@ -161,14 +161,14 @@ const Select = styled.select`
 const Textarea = styled.textarea`
   background-color: var(--main-white);
   color: var(--main-black);
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 300;
   width: 100%;
   margin: 0;
 `
 
 const Label = styled.label`
-  font-size: 18px;
+  font-size: 1.125em;
   font-weight: 700;
   color: var(--main-white);
 `
@@ -192,7 +192,7 @@ const ButtonReset = styled.button`
   border: none;
   border-radius: 50px;
   box-shadow: var(--shadow-red-30);
-  font-size: 22pt;
+  font-size: 1.375em;
   color: var(--main-white);
   font-weight: 500;
   padding: 9px 14px;
@@ -203,7 +203,7 @@ const ButtonSubmit = styled.button`
   border: none;
   border-radius: 50px;
   box-shadow: var(--shadow-green);
-  font-size: 22pt;
+  font-size: 1.375em;
   color: var(--main-white);
   font-weight: 500;
   padding: 9px 14px;

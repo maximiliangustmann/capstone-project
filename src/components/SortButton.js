@@ -54,5 +54,5 @@ const Button = styled.button`
   margin: 10px 5px;
   color: var(--main-black);
   font-weight: 300;
-  font-size: 16px;
+  font-size: 1em;
 `
