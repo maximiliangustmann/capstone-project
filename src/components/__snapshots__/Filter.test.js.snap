@@ -2,44 +2,48 @@
 
 exports[`Filter renders correctly 1`] = `
 <div
-  className="Filter__FilterBar-sc-1lxxwpc-0 eklqMS"
-  data-cy="filterbar"
+  className="Filter__FilterBarWrapper-sc-1lxxwpc-2 gzzGsf"
 >
-  <button
-    className="Filter__FilterButton-sc-1lxxwpc-1 iukrbX"
-    onClick={[Function]}
+  <div
+    className="Filter__FilterBar-sc-1lxxwpc-0 NElOz"
+    data-cy="filterbar"
   >
-    Show all
-  </button>
-  <button
-    className="Filter__FilterButton-sc-1lxxwpc-1 iukrbX"
-    onClick={[Function]}
-  >
-    Book
-  </button>
-  <button
-    className="Filter__FilterButton-sc-1lxxwpc-1 iukrbX"
-    onClick={[Function]}
-  >
-    Audiobook
-  </button>
-  <button
-    className="Filter__FilterButton-sc-1lxxwpc-1 iukrbX"
-    onClick={[Function]}
-  >
-    Podcast
-  </button>
-  <button
-    className="Filter__FilterButton-sc-1lxxwpc-1 iukrbX"
-    onClick={[Function]}
-  >
-    Film
-  </button>
-  <button
-    className="Filter__FilterButton-sc-1lxxwpc-1 iukrbX"
-    onClick={[Function]}
-  >
-    Series
-  </button>
+    <button
+      className="Filter__FilterButton-sc-1lxxwpc-1 kXHlYl"
+      onClick={[Function]}
+    >
+      Show all
+    </button>
+    <button
+      className="Filter__FilterButton-sc-1lxxwpc-1 kXHlYl"
+      onClick={[Function]}
+    >
+      Book
+    </button>
+    <button
+      className="Filter__FilterButton-sc-1lxxwpc-1 kXHlYl"
+      onClick={[Function]}
+    >
+      Audiobook
+    </button>
+    <button
+      className="Filter__FilterButton-sc-1lxxwpc-1 kXHlYl"
+      onClick={[Function]}
+    >
+      Podcast
+    </button>
+    <button
+      className="Filter__FilterButton-sc-1lxxwpc-1 kXHlYl"
+      onClick={[Function]}
+    >
+      Film
+    </button>
+    <button
+      className="Filter__FilterButton-sc-1lxxwpc-1 kXHlYl"
+      onClick={[Function]}
+    >
+      Series
+    </button>
+  </div>
 </div>
 `;

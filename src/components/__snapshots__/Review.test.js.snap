@@ -31,7 +31,7 @@ exports[`Review renders correctly 1`] = `
     </svg>
   </button>
   <h2
-    className="Review__Title-ip4zvc-3 QeWEj"
+    className="Review__Title-ip4zvc-3 kzswHz"
   >
     TestTitle
   </h2>
@@ -39,39 +39,39 @@ exports[`Review renders correctly 1`] = `
     className="Review__Tags-ip4zvc-4 bMeKkt"
   >
     <button
-      className="Review__Tag-ip4zvc-5 dErket"
+      className="Review__Tag-ip4zvc-5 gNHcvX"
       data-cy="category"
     >
       TestCategory
     </button>
     <button
-      className="Review__Tag-ip4zvc-5 dErket"
+      className="Review__Tag-ip4zvc-5 gNHcvX"
     >
       TestSubcategory
     </button>
     <button
-      className="Review__Tag-ip4zvc-5 dErket"
+      className="Review__Tag-ip4zvc-5 gNHcvX"
     >
       TestRating
     </button>
   </div>
   <h3
-    className="Review__Summary-ip4zvc-6 iDpXoF"
+    className="Review__Summary-ip4zvc-6 czofpl"
   >
     Summary 
   </h3>
   <p
-    className="Review__ReviewText-ip4zvc-8 gMOuPx"
+    className="Review__ReviewText-ip4zvc-8 kvdqtb"
   >
     TestSummary
   </p>
   <h3
-    className="Review__Lessons-ip4zvc-7 bsVGYp"
+    className="Review__Lessons-ip4zvc-7 cEAOCN"
   >
     Lessons 
   </h3>
   <p
-    className="Review__ReviewText-ip4zvc-8 gMOuPx"
+    className="Review__ReviewText-ip4zvc-8 kvdqtb"
   >
     TestLessons
   </p>
