@@ -1,0 +1,15 @@
+{
+  "name": "MINDPING",
+  "short_name": "MIPI",
+  "description": "Store all the valuable information about your favorite books, audiobooks, podcasts, films and series.",
+  "lang": "en-US",
+  "start_url": "/",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "homescreen.png",
+      "sizes": "200x200",
+      "type": "image/png"
+    }
+  ]
+}

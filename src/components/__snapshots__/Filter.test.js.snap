@@ -2,7 +2,7 @@
 
 exports[`Filter renders correctly 1`] = `
 <div
-  className="Filter__FilterBarWrapper-sc-1lxxwpc-2 gzzGsf"
+  className="Filter__FilterBarWrapper-sc-1lxxwpc-2 kogQtV"
 >
   <div
     className="Filter__FilterBar-sc-1lxxwpc-0 NElOz"
