@@ -10,4 +10,4 @@ React / React-Router / React Hooks / StyledComponents / React Testing Library / 
 
 ## Test-URL (Master)
 
-[ capstone-project-ashy.vercel.app ](capstone-project-ashy.vercel.app)
+[ MINDPING ](https://capstone-project-ashy.vercel.app/)
